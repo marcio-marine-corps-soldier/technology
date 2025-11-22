@@ -2,7 +2,7 @@
 
 *An expert analysis of the decentralized web ecosystem and its trajectory through 2025 and beyond*
 
-![Web3 concept visualization]([https://blog-pt.lac.tdsynnex.com/hubfs/Blog%20-%20TD%20SYNNEX%20BR/2023/Imagens%20dos%20blogposts/Maio/09-05-GettyImages-1431369435.png])
+[https://blog-pt.lac.tdsynnex.com/hubfs/Blog%20-%20TD%20SYNNEX%20BR/2023/Imagens%20dos%20blogposts/Maio/09-05-GettyImages-1431369435.png]
 
 *Note: This article is based on verifiable information and aims to provide a realistic, non-speculative overview of the Web3 landscape.*
 

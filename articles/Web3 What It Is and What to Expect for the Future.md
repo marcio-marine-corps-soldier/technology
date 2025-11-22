@@ -1,6 +1,6 @@
 # Web3: What It Is and What to Expect for the Future?
 
-*An expert analysis of the decentralized web ecosystem and its trajectory through 2025 and beyond*
+*An expert analysis of the decentralized web ecosystem and its trajectory through 2025 and beyond.*
 
 *Note: This article is based on verifiable information and aims to provide a realistic, non-speculative overview of the Web3 landscape.*
 

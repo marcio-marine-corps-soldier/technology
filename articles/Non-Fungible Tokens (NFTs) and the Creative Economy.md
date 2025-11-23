@@ -14,6 +14,25 @@ The significance of NFTs extends far beyond the spectacular headlines of multi-m
 
 The **economic impact** of this innovation has been substantial. Between January and September 2021 alone, the NFT market reached a trading volume of $13.2 billion. More importantly, NFTs have facilitated new economic models that allow creators to capture more value from their work through direct monetization, automated royalty structures, and novel forms of patronage.
 
+Although 2021 was an explosive year for NFTs, the latest data shows a market correction: in 2024, trading volume fell to US$13.7 billion. And, in the first half of 2025, NFT sales closed at US$2.82 billion, according to CryptoSlam — a pullback, but also a sign of maturity and a less speculative market.
+
+These new models (automatic royalties, patronage, direct sales) remain active and relevant — despite the drop in volumes — because the market is “coming down from the hype” to become more utilitarian and sustainable.
+
+Projection 2025–2030:
+
+- The market will not return to its 2021 peak.
+- It will stabilize between US$8–12 billion/year until 2027.
+- The hype will die, but real-world usage will grow: NFT = infrastructure, not collectible.
+- Three drivers of recovery:
+- Tokenization of real assets (RWA) — real estate, contracts, rights.
+- Gaming with a sustainable economy — not pay-to-earn.
+- Identity and credentials — NFT as a verifiable digital passport.
+- Dynamic royalties will become the standard (based on liquidity and time).
+- Those who remain focused on “JPEG art” will disappear.
+- Those who integrate utility + interoperability will dominate.
+
+Summary: the market shrinks, but matures — less speculation, more serious money.
+
 This article explores the multifaceted relationship between NFTs and the creative economy, with particular emphasis on three central themes: the redefinition of **digital ownership**, the establishment of **authenticity** in digital works, and the creation of innovative **monetization mechanisms** for creators. Through an in-depth case study of the Bored Ape Yacht Club, we examine how NFT communities generate real-world value and benefits for their members. Finally, we consider the future trajectory of NFT technology and its potential to further transform creative industries.
 
 ## 2 Understanding NFTs: Fundamentals and Terminology
@@ -278,3 +297,9 @@ MIT Sloan Review Brazil: The role of blockchain in NFTs: https://mitsloanreview.
 
 Practical Applications and Use Cases
 Iberdrola: Non-fungible token: https://www.iberdrola.com/quem-somos/nosso-modelo-inovacao/nft-token-nao-fungivel
+
+“NFT sales in the first half of 2025: US$2.82 billion” — Cointelegraph, based on CryptoSlam data: https://cointelegraph.com/news/nft-sales-volume-h1-2025-dappradar-cryptoslam/
+
+“NFT trading volume in 2024 fell to US$13.7 billion” — DappRadar, quoted by Cointelegraph: https://cointelegraph.com/news/nfts-2024-worst-year-since-2020-dappradar/
+
+“NFT trading volume down 48.2% between March and June 2025” (Top 12 chains) — CoinGecko Q2 2025 Crypto Industry Report: https://assets.coingecko.com/reports/2025/CoinGecko-2025-Q2-Crypto-Industry-Report.pdf?

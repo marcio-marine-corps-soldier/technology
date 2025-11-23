@@ -253,13 +253,22 @@ The true promise of NFTs lies not in speculative trading but in their capacity t
 
 ## References
 
-1. InfoMoney. "O que são NFTs? Entenda como funcionam os tokens não fungíveis." 
-2. Gate.io. "NFTs Mágicos: Redefinindo a Propriedade Digital na Era Blockchain." 
-3. Bity. "NFTs e a Indústria da Música: Como Artistas Estão Usando Tokens Não Fungíveis." 
-4. Antier Solutions. "Tendências populares de NFT que toda empresa de desenvolvimento precisa conhecer." 
-5. Kaspersky. "Definição de NFT." 
-6. Coins.xyz. "NFTs: A Revolução da Propriedade Digital." 
-7. Showband. "Tokenização de Músicas (NFTs): O Novo Modelo de Negócio Revolucionário para Artistas Independentes." 
-8. Monotype. "O que são NFTs e como eles vão impactar a indústria de tipos?" 
-9. Wikipedia. "Bored Ape Yacht Club." 
-10. Funarte. "Entenda o que é e como funcionam os tokens não fungíveis (NFTs)."
+Relatórios de Mercado e Dados Estatísticos:
+
+CoinLaw (2025): Fornece os dados estatísticos mais atualizados e abrangentes sobre o tamanho do mercado, categorias líderes e adoção geográfica em 2025.
+
+DappRadar (2025): Empresa reconhecida por rastrear e relatar dados de aplicações descentralizadas (dApps), incluindo volumes de trading e usuários ativos em NFTs, citada em várias análises.
+
+Binance Research (2025): Produz relatórios aprofundados sobre tendências, incluindo a convergência entre NFTs e ativos físicos.
+
+Análise Setorial e Tendências Futuras:
+
+Gate.io (2025): Oferece uma visão geral acessível e atualizada sobre o estado dos NFTs, focando na mudança para utilitividade e interoperabilidade.
+
+BeInCrypto (2025): Traz a perspectiva de players da indústria, como o co-fundador da plataforma Rarible, Alexander Salnikov, sobre a evolução do mercado.
+
+Inovações Técnicas e Casos de Uso:
+
+NFT Evening (2025): Cobre casos de uso emergentes e de nicho, como a convergência entre NFTs e pré-vendas de criptomoedas.
+
+Documentação Oficial de Blockchains: Para fundamentos técnicos, referencie a documentação do Padrão ERC-721 (Ethereum) e de *Layer-2s* como Polygon e Immutable X.

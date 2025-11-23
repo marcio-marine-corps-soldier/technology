@@ -156,13 +156,46 @@ Blockchain is not a silver bullet for all social or economic ills. It is, howeve
 
 ## References and Further Reading
 
-1.  **Nakamoto, S.** (2008). *Bitcoin: A Peer-to-Peer Electronic Cash System*. https://bitcoin.org/bitcoin.pdf
-2.  **The World Bank.** (2021). *The Global Findex Database 2021*. https://www.worldbank.org/en/publication/globalfindex
-3.  **Verizon.** (2023). *2023 Data Breach Investigations Report*. https://www.verizon.com/business/resources/reports/dbir/
-4.  **Cambridge Centre for Alternative Finance.** *Cambridge Bitcoin Electricity Consumption Index*. https://ccaf.io/cbeci/index
-5.  **Buterin, V.** (2021). *Why Sharding Is Great: Demystifying the Technical Properties*. https://vitalik.ca/general/2021/04/07/sharding.html
-6.  **IBM.** *IBM Food Trust*. https://www.ibm.com/blockchain/solutions/food-trust
-7.  **ID2020 Alliance.** https://id2020.org/
-8.  **Chainalysis.** *The 2023 Crypto Crime Report*. https://www.chainalysis.com/crypto-crime-report/
-9.  **OECD.** (2021). *Trade in Counterfeit and Pirated Goods*. https://www.oecd.org/gov/illicit-trade/trade-in-counterfeit-and-pirated-goods-g2g9f533-en.htm
-10. **DeFi Pulse.** (Historical TVL). https://www.defipulse.com/
+# Referências Bibliográficas
+
+## Criptomoedas e Blockchain
+
+- **Nakamoto, S. (2008). Bitcoin: um sistema de caixa eletrônico peer-to-peer**  
+  Disponível em: https://bitcoin.org/bitcoin.pdf
+
+- **Buterin, V. (2021). Por que Sharding é ótimo: desmistificando as propriedades técnicas**  
+  Disponível em: https://vitalik.ca/general/2021/04/07/sharding.html
+
+- **Centro de Cambridge para Finanças Alternativas. Índice de consumo de eletricidade Cambridge Bitcoin**  
+  Disponível em: https://ccaf.io/cbeci/index
+
+## Finanças e Economia Digital
+
+- **O Banco Mundial. (2021). O banco de dados Global Findex 2021**  
+  Disponível em: https://www.worldbank.org/en/publication/globalfindex/Data
+
+- **Pulso DeFi. (Histórico TVL)**  
+  Disponível em: https://www.defipulse.com/
+
+- **Chainalysis. O Relatório Cripto Crime 2023**  
+  Disponível em: https://www.chainalysis.com/crypto-crime-report-2023-preview/
+
+## Segurança e Compliance
+
+- **Verizon. (2023). Relatório de investigações de violação de dados de 2023**  
+  Disponível em: https://www.verizon.com/business/resources/reports/2023-data-breach-investigations-report.pdf
+
+- **OCDE. (2021). Comércio de mercadorias falsificadas e piratas**  
+  Disponível em: https://www.oecd.org/gov/illicit-trade/trade-in-counterfeit-and-pirated-goods-g2g9f533-en.htm
+
+## Aplicações Práticas
+
+- **IBM. IBM Food Trust**  
+  Disponível em: https://www.ibm.com/products/food-trust
+
+- **Aliança ID2020**  
+  Disponível em: https://id2020.org/
+
+---
+
+*Documento atualizado em: 20 de dezembro de 2024*

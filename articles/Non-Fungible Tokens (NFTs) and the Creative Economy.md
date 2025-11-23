@@ -253,26 +253,26 @@ The true promise of NFTs lies not in speculative trading but in their capacity t
 
 ## References
 
-Definições e Fundamentos
-Token não fungível – Wikipédia: https://pt.wikipedia.org/wiki/Token_n%C3%A3o_fung%C3%ADvel
+Definitions and Fundamentals
+Non-fungible token – Wikipedia: https://pt.wikipedia.org/wiki/Token_n%C3%A3o_fung%C3%ADvel
 
-Funarte: Entenda o que é e como funcionam os tokens não fungíveis (NFTs): https://www.gov.br/funarte/pt-br/assuntos/noticias/todas-noticias/entenda-o-que-e-e-como-funcionam-os-tokens-nao-fungiveis-nfts
+Funarte: Understand what non-fungible tokens (NFTs) are and how they work: https://www.gov.br/funarte/pt-br/assuntos/noticias/todas-noticias/entenda-o-que-e-e-como-funcionam-os-tokens-nao-fungiveis-nfts
 
-InfoMoney: O que são NFTs?: https://www.infomoney.com.br/guias/nft-token-nao-fungivel/
+InfoMoney: What are NFTs?: https://www.infomoney.com.br/guias/nft-token-nao-fungivel/
 
-CM Capital: Token não fungível (NFT): https://cmcapital.com.br/blog/token-nao-fungiveis/
+CM Capital: Non-fungible token (NFT): https://cmcapital.com.br/blog/token-nao-fungiveis/
 
-Análise Técnica e Comparações
-Trust Wallet: Fungíveis vs Tokens Não Fungíveis: Explicado: https://trustwallet.com/blog/nft/fungiveis-vs-tokens-nao-fungiveis-explicado-1
+Technical Analysis and Comparisons
+Trust Wallet: Fungible vs. Non-Fungible Tokens: Explained: https://trustwallet.com/blog/nft/fungiveis-vs-tokens-nao-fungiveis-explicado-1
 
-OneKey: Tokens Fungíveis vs. Não Fungíveis: Uma Explicação: https://onekey.so/blog/pt/ecosystem/fungible-vs-non-fungible-tokens-explained/
+OneKey: Fungible vs. Non-Fungible Tokens: An Explanation: https://onekey.so/blog/pt/ecosystem/fungible-vs-non-fungible-tokens-explained/
 
-Phemex: O que são tokens não fungíveis (NFTs): https://phemex.com/pt/academy/what-are-non-fungible-tokens-nfts
+Phemex: What are Non-Fungible Tokens (NFTs): https://phemex.com/pt/academy/what-are-non-fungible-tokens-nfts
 
-Análise de Mercado e Perspectivas Atuais
-Gate.io: Os NFTs estão mortos? Uma análise aprofundada...: https://www.gate.com/pt-br/learn/articles/are-nfts-dead-a-deep-dive-into-the-current-state-challenges-and-future-of-the-industry/8841
+Market Analysis and Current Outlook
+Gate.io: Are NFTs Dead? An in-depth analysis...: https://www.gate.com/pt-br/learn/articles/are-nfts-dead-a-deep-dive-into-the-current-state-challenges-and-future-of-the-industry/8841
 
-MIT Sloan Review Brasil: O papel do blockchain nos NFTs: https://mitsloanreview.com.br/como-o-blockchain-escalonou-o-atual-boom-dos-nfts/
+MIT Sloan Review Brazil: The role of blockchain in NFTs: https://mitsloanreview.com.br/como-o-blockchain-escalonou-o-atual-boom-dos-nfts/
 
-Aplicações Práticas e Casos de Uso
-Iberdrola: Token não fungível: https://www.iberdrola.com/quem-somos/nosso-modelo-inovacao/nft-token-nao-fungivel
+Practical Applications and Use Cases
+Iberdrola: Non-fungible token: https://www.iberdrola.com/quem-somos/nosso-modelo-inovacao/nft-token-nao-fungivel

@@ -2,7 +2,7 @@
 
 ## Abstract
 
-Web3 marks a structural shift in digital architecture, replacing centralized models with distributed systems based on blockchain. This article analyzes the current state of Web3, its fundamental technologies, real-world use cases, technical and economic limitations, as well as future perspectives in infrastructure, governance, identity, and new models of digital ownership.
+Web3 marks a structural shift in digital architecture, replacing centralized models with distributed systems based on blockchain. This article analyzes the current state of Web3, its fundamental technologies, real-world use cases, technical and economic limitations, as well as future perspectives in infrastructure, governance, identity, and new models of digital ownership. The approach includes objective critiques and verifiable trends beyond speculative discourse.
 
 **Keywords:** Web3, Blockchain, Decentralization, Layer 2, DAOs, Decentralized Identity, Cryptoeconomy.
 
@@ -12,196 +12,199 @@ Web3 marks a structural shift in digital architecture, replacing centralized mod
 
 The evolution of the internet can be summarized in three phases:
 
-- **Web1:** reading and static content.
+- **Web1:** static content and one-way reading.
 
-- **Web2:** centralized platforms and data capture.
+- **Web2:** centralized platforms, social networks, data capture.
 
-- **Web3:** digital ownership, interoperability, and user control.
+- **Web3:** digital ownership, decentralized protocols, and programmable interoperability.
 
-Web3 proposes a structural reorganization: the user ceases to be a product and becomes the owner of their data, identity, and digital assets.
+Web 3 emerges as a response to the concentration of power, lack of privacy, and dependence on intermediaries. Unlike Web 2, where the user is the product, Web 3 places assets, identity, and data under the individual's control—without depending on a single entity.
+
+More than a trend, Web 3 represents a **structural reorganization** of the internet.
 
 ---
 
-## 2. Technological Foundations of Web3
+## 2. Technological Foundations of Web 3
 
-### 2.1 Decentralization
-Removes single points of control and reduces dependence on intermediaries.
+### **2.1 Decentralization**
+Eliminates single points of control, increasing resistance to censorship and systemic failures.
 
-### 2.2 Blockchain
-Ensures data integrity and auditability.
+### **2.2 Blockchain**
+Distributed ledger that guarantees data integrity and auditability.
 
-New architectures:
-- **Layer 2 (L2):** Optimism, Arbitrum, zkSync
+**Relevant new architectures:**
 
-- **Modularity:** Celestia (execution separate from consensus)
+- **Layer 2 (L2):** Optimism, Arbitrum, zkSync → cost reduction and increased throughput.
 
-### 2.3 Cryptoeconomy
-Incentive systems that keep networks active.
+- **Modular Blockchains:** Celestia → separation of execution, consensus, and data availability.
+
+### **2.3 Cryptoeconomy**
+Incentive mechanisms that keep networks active without central authorities.
 
 Examples:
+- staking (Lido, Ethereum PoS)
+- restaking and shared security (EigenLayer)
 
-- staking (Lido)
-- restaking (EigenLayer)
-
-### 2.4 NFTs and Digital Property
-Applications have evolved to:
-
-- verifiable credentials
-- tokenized tickets
+### **2.4 NFTs and Digital Property**
+Evolved from speculative art to:
+- interoperable items
+- ticket tokenization
 - access and authentication
+- verifiable credentials
 
-### 2.5 Smart Contracts
-Automated execution without intermediaries.
+### **2.5 Smart Contracts**
+Self-executing code that eliminates intermediaries in financial and logical agreements.
 
-Current Trend:
+Current trend:
 
-- **Account Abstraction (ERC-4337)**
+- **Account Abstraction (ERC-4337):** wallets with Web2-like UX (social retrieval, seed phrase-free login).
 
 ---
 
 ## 3. Real-World Applications in 2024–2025
 
-### 3.1 Decentralized Finance (DeFi)
+### **3.1 Decentralized Finance (DeFi)**
+Programmable financial services without banks. - **Uniswap v4:** liquidity with custom logic (hooks).
 
-Adoption measured by TVL (Total Value Locked):
+- **Lido:** Ethereum liquid staking.
 
-![DeFi TVL](tvl_defi.png)
-
-Insights:
-- Peak in 2021
-- Retraction in 2022
-- Gradual recovery post-2023
-- Maturity surpasses speculation
-
-Key Protocols:
-- Uniswap v4
-- Lido
-- Aave
+- **Aave:** automated collateralized credit.
 
 ---
 
-### 3.2 NFTs — From Speculation to Utility
+### **3.2 Infrastructure and Interoperability**
+Web3 advances towards a connected ecosystem.
 
-![NFT Volume](nft_volume.png)
+- **Chainlink CCIP:** communication between blockchains and traditional systems.
 
-Trends:
-- Decline after speculative boom
-- Real-world use in:
+- **Cosmos IBC:** native interoperability between independent networks.
 
-- Membership
-- Ticketing
-- Identity Verifiable
-- Focus on interoperability, not expensive art
+- **Polygon 2.0:** unified liquidity layer.
 
 ---
 
-### 3.3 Infrastructure and Interoperability
+### **3.3 Decentralized Identity (DID)**
+Identity control without central providers.
 
-Main advances:
+- **ENS (Ethereum Name Service)**
 
-- Chainlink CCIP
-- Cosmos IBC
-- Polygon 2.0
+- **Verifiable Credentials (W3C)**
 
----
+- **Passkeys + Wallets AA**
 
-### 3.4 Decentralized Identity (DID)
-
-Applications:
-- Passwordless login
-- Selective privacy with ZKPs
-- ENS + verifiable credentials
+Emerging uses:
+- passwordless login
+- proof of humanity
+- selective privacy (zero-knowledge proofs)
 
 ---
 
-### 3.5 Layer-2 Adoption
+### **3.4 Decentralized Autonomous Organizations (DAOs)**
+Governance via smart contracts.
 
-![Layer-2 Adoption](l2_adoption.png)
+Functional cases:
+- programmed treasuries
+- transparent voting
+- global capital allocation
 
-Data conclusion:
-- Reduced cost accelerates adoption
-- Scalability ceases to be a barrier
-- The future of Web 3 occurs in L2, not in new L1s
+Current challenge:
+- concentration of votes by large token holders.
 
 ---
 
-## 4. Structural Challenges of Web 3
+### **3.5 Real-World Asset Tokenization (RWA)**
+Integrates assets from the physical world to the digital world.
 
-### 4.1 Scalability
-Dependent on:
+Examples:
+- tokenized government bonds
+- fractional ownership of real estate
+- carbon credits
 
-- Danksharding
-- More rollups Efficient
+Trend:
 
-### 4.2 Usability
-Main problems:
+- integration with regulated institutions.
+
+---
+
+## 4. Structural Challenges of Web3
+
+### **4.1 Scalability**
+Adoption depends on:
+
+- more efficient rollups
+- data availability (danksharding)
+
+### **4.2 Usability**
+Main barriers:
+
 - seed phrases
-- complex interfaces
+- unintuitive interfaces
 - irreversible loss of funds
 
-Solution:
-- abstract blockchain from the end user
+Solution in progress:
 
-### 4.3 Security
-Risks:
-- exploits
-- rug pulls
-- dependence on oracles
+- abstraction of the blockchain for the end user.
 
-### 4.4 Hidden Centralization
-Occurs in:
-- RPCs (Infura, Alchemy)
-- dominant validators
-- VCs with a large share of the supply
+### **4.3 Security**
+Predominant risks:
+- Contract exploits
+- Rug pulls
+- Oracle dependency
 
-### 4.5 Regulation
-Balance between:
-- consumer protection
-- innovation
-- global harmonization
+### **4.4 Hidden Centralization**
+Even in decentralized systems, there is concentration in:
+- RPC providers (Infura, Alchemy)
+- Dominant validators
+- VCs with large token allocation
+
+### **4.5 Regulation**
+Current dilemma:
+- Need for legal clarity
+- Risk of stifling innovation
+- Different approaches between countries
 
 ---
 
 ## 5. The Future of Web 3
 
-### 5.1 Invisible Blockchain
-End user unaware of underlying technology.
+### **5.1 Invisible Blockchain**
+The end user will not need to know they are using blockchain.
 
-### 5.2 Portable Identity
-Interoperable and private credentials.
+### **5.2 Portable Identity**
+Verifiable credentials, with selective privacy and global interoperability.
 
-### 5.3 Real Asset Tokenization (RWA)
-Connection with traditional markets.
+### **5.3 Integration with the Traditional System**
+RWA and programmable payments should connect banks and public networks.
 
-### 5.4 Programmable Governance
-Hybrid DAOs with:
-
+5.4 Governance Programmable**
+DAOs will evolve into:
+- hybrid models
 - dynamic quorum
-- automatic accountability
+- automated accountability
 
-### 5.5 New Digital Property
-From an access economy to **verifiable ownership**.
+### **5.5 New Ownership Models**
+From the access economy to the **verifiable digital ownership** economy.
 
 ---
 
 ## 6. Conclusion
 
-Web3 doesn't depend on new blockchains, but on:
+Web3 is not just a technological evolution—it's a restructuring of the power model on the internet. Its success depends less on new blockchains and more on abstracting complexity, ensuring real security, and delivering utility beyond speculation. As scalability, decentralized identity, and interoperability mature, Web3 ceases to be a promise and becomes infrastructure.
 
-- abstracting complexity
-- ensuring real security
-- delivering utility beyond speculation
-
-The turning point happens when Web3 ceases to be perceived—and becomes infrastructure.
+The decisive point will not be when everyone uses blockchain, but when nobody realizes they are using it.
 
 ---
 
 ## References
 
-- Antonopoulos, A. M. *Mastering Bitcoin* (2014)
-- Werbach, K. *The Blockchain and the New Architecture of Trust* (2018)
-- Tapscott, D. & Tapscott, A. *Blockchain Revolution* (2016)
+- Antonopoulos, A. M. (2014). *Mastering Bitcoin*. O'Reilly Media.
+
+- Werbach, K. (2018). *The Blockchain and the New Architecture of Trust*. MIT Press.
+
+- Tapscott, D., & Tapscott, A. (2016). *Blockchain Revolution*. Portfolio.
+
 - Ethereum Foundation — https://ethereum.org
+- Polygon Labs — https://polygon.technology
 - Chainlink — https://chain.link
-- Cosmos — https://cosmos.network
-- DeFiLlama — https://defillama.com
+- Cosmos IBC — https://cosmos.network
+- DeFiLlama (TVL data and market metrics) — https://defillama.com

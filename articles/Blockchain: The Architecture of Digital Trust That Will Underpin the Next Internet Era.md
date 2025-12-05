@@ -545,5 +545,3 @@ Blockchain will likely coexist with rather than replace centralized systems, ser
 [29] M. Zamani, M. Movahedi, and M. Raykova, “RapidChain: Scaling blockchain via full sharding,” in Proc. 2018 ACM SIGSAC Conf. Computer and Communications Security, 2018, pp. 931–948. doi: 10.1145/3243734.3243853
 
 [30] Z. Zheng, S. Xie, H. N. Dai, X. Chen, and H. Wang, “Blockchain challenges and opportunities: A survey,” Int. J. Web Grid Serv., vol. 14, no. 4, pp. 352–375, 2018. doi: 10.1504/IJWGS.2018.095647
----
-

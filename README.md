@@ -1,3 +1,5 @@
+<div align="center">
+
 # TECHNOLOGY
 
 ### Advanced Computing • Artificial Intelligence • Autonomous Systems • Engineering

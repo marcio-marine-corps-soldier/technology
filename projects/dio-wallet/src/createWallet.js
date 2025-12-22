@@ -1,33 +1,32 @@
-//importando as dependencias
+// dependências
 const bip32 = require('bip32')
 const bip39 = require('bip39')
 const bitcoin = require('bitcoinjs-lib')
 
-//definir a rede
-//bitcoin - rede principal - mainnet
-//testnet - rede de teste - tesnet
-const network = bitcoin.networks.testnet
+// MAINNET
+const network = bitcoin.networks.bitcoin
 
-//derivação de carteiras HD
-const path = `m/49'/1'/0'/0` 
+// BIP49 - P2PKH (legacy compatível)
+const path = `m/49'/0'/0'/0`
 
-//criando o mnemonic para a seed (palavras de senha)
+// mnemonic
 let mnemonic = bip39.generateMnemonic()
 const seed = bip39.mnemonicToSeedSync(mnemonic)
 
-//criando a raiz da cartiera HD
+// raiz HD
 let root = bip32.fromSeed(seed, network)
 
-//criando uma conta - par pvt-pub keys
+// derivação
 let account = root.derivePath(path)
 let node = account.derive(0).derive(0)
 
+// endereço real
 let btcAddress = bitcoin.payments.p2pkh({
-    pubkey: node.publicKey,
-    network: network,
+  pubkey: node.publicKey,
+  network: network,
 }).address
 
-console.log("Carteira gerada")
-console.log("Endereço: ", btcAddress)
-console.log("Chave privada:", node.toWIF())
-console.log("Seed:", mnemonic)
+console.log("🚨 CARTEIRA REAL GERADA 🚨")
+console.log("Endereço BTC:", btcAddress)
+console.log("Chave Privada (WIF):", node.toWIF())
+console.log("Seed (GUARDE OFFLINE):", mnemonic)

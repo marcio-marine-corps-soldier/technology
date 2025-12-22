@@ -27,14 +27,11 @@ O objetivo é criar e utilizar uma **carteira de criptomoedas**, aplicando conce
 
 ## 🛠️ Tecnologias Utilizadas
 
-- **Blockchain** (Ethereum ou outra rede testada)  
-- **Carteira de Criptomoedas**: Metamask / Trust Wallet  
-- **Git & GitHub**  
+- **Blockchain** (Bitcoin, Ethereum ou outra rede testada)  
+- **Carteira de Criptomoedas**: Electrum Wallet
+- **Testes de transações**: blockchain.com
+- **Git & GitHub**
+- **NodeJS**
 - **Markdown** (documentação)
 
-*(adicione tecnologias extras se aplicável, como Node.js ou Python caso tenha feito scripts)*
-
 ---
-
-## 📂 Estrutura do Repositório
-

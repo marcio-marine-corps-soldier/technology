@@ -1,4 +1,4 @@
-<img width="2816" height="1536" alt="Gemini_Generated_Image_wh76dqwh76dqwh76" src="https://github.com/user-attachments/assets/b67c569d-fabe-4fdd-b58b-a7b773514eac" />
+<img width="2816" height="1295" alt="Gemini_Generated_Image_wh76dqwh76dqwh76 - Copia" src="https://github.com/user-attachments/assets/0060c938-0c8a-4b78-8437-c62be2e0186b" />
 
 # Silent Payments (BIP-352): The Biggest Advance in On-Chain Privacy in Bitcoin Since Taproot
 

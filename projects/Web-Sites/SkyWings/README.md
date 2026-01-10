@@ -1,194 +1,187 @@
-# SkyWings - Plataforma de Vendas de Passagens Aéreas
+# SkyWings - Flight Ticket Sales Platform
 
 ![SkyWings Website Preview](https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80)
 
-Uma plataforma web moderna e responsiva para busca e compra de passagens aéreas, desenvolvida com HTML, CSS e JavaScript puro.
+A modern and responsive web platform for searching and purchasing flight tickets, developed with pure HTML, CSS, and JavaScript.
 
-## 🚀 Demonstração
+## 🚀 Live Demo
 
-[Acesse a demonstração ao vivo](https://seu-usuario.github.io/skywings-platform) *(link exemplo)*
+[Access the live demo](https://your-username.github.io/skywings-platform) *(example link)*
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- **🔍 Busca Avançada de Passagens**
-  - Origem e destino com sugestões
-  - Datas flexíveis (ida e volta)
-  - Seleção de passageiros e classes
-  - Filtros por preço e companhias aéreas
+- **🔍 Advanced Flight Search**
+  - Origin and destination with suggestions
+  - Flexible dates (round trip)
+  - Passenger and class selection
+  - Filters by price and airlines
 
-- **📱 Design Totalmente Responsivo**
-  - Adaptado para desktop, tablet e mobile
-  - Menu hamburguer para dispositivos móveis
-  - Layout flexível em todas as telas
+- **📱 Fully Responsive Design**
+  - Adapted for desktop, tablet, and mobile
+  - Hamburger menu for mobile devices
+  - Flexible layout on all screen sizes
 
-- **🎯 Serviços Especializados**
-  - Comparação de preços em tempo real
-  - Suporte ao cliente 24/7
-  - Garantia de compra segura
-  - Roteiros de viagem personalizados
+- **🎯 Specialized Services**
+  - Real-time price comparison
+  - 24/7 customer support
+  - Secure purchase guarantee
+  - Personalized travel itineraries
 
-- **📲 App Mobile**
-  - Disponível para iOS e Android
-  - Check-in online
-  - Alertas de preços
-  - Acesso offline aos bilhetes
+- **📲 Mobile App**
+  - Available for iOS and Android
+  - Online check-in
+  - Price alerts
+  - Offline ticket access
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **HTML5** - Estrutura semântica do site
-- **CSS3** - Estilização moderna com variáveis CSS, Flexbox e Grid
-- **JavaScript** - Interatividade e funcionalidades dinâmicas
-- **Font Awesome** - Ícones profissionais
-- **Google Fonts** - Tipografia moderna
-- **Unsplash** - Imagens de alta qualidade
+- **HTML5** - Semantic website structure
+- **CSS3** - Modern styling with CSS variables, Flexbox, and Grid
+- **JavaScript** - Interactivity and dynamic functionalities
+- **Font Awesome** - Professional icons
+- **Google Fonts** - Modern typography
+- **Unsplash** - High-quality images
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
-skywings-platform/
+SkyWings/
 │
-├── index.html              # Página principal
-├── README.md               # Este arquivo
+├── deliverables/
+|   └──index.html              # Main page
+├── README.md               # This file
 │
-├── assets/                 # Diretório de recursos
-│   ├── css/
-│   │   └── style.css      # Estilos principais (embed no HTML)
-│   ├── js/
-│   │   └── main.js        # JavaScript (embed no HTML)
-│   └── images/             # Imagens locais (se necessário)
-│
-└── (em implementação)      # Futuras páginas
-    ├── resultados.html     # Página de resultados de busca
-    ├── checkout.html       # Página de finalização de compra
-    └── minha-conta.html    # Área do cliente
+└── (in development)        # Future pages
+    ├── results.html        # Search results page
+    ├── checkout.html       # Checkout page
+    └── my-account.html     # Customer area
 ```
 
 ## 🎨 Design System
 
-### Cores Principais
+### Main Colors
 ```css
---primary: #1a73e8;    /* Azul principal */
---secondary: #0d47a1;  /* Azul escuro */
---accent: #ff6d00;     /* Laranja de destaque */
---light: #f8f9fa;      /* Fundo claro */
---dark: #202124;       /* Texto escuro */
+--primary: #1a73e8;    /* Primary blue */
+--secondary: #0d47a1;  /* Dark blue */
+--accent: #ff6d00;     /* Highlight orange */
+--light: #f8f9fa;      /* Light background */
+--dark: #202124;       /* Dark text */
 ```
 
-### Tipografia
-- **Títulos:** Segoe UI, sem serifa
-- **Corpo:** Sistema de fontes do sistema
-- **Hierarquia:** Estabelecida com tamanhos de 1rem a 3rem
+### Typography
+- **Headings:** Segoe UI, sans-serif
+- **Body:** System font stack
+- **Hierarchy:** Established with sizes from 1rem to 3rem
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-### 1. Clone o repositório
+### 1. Clone the repository
 ```bash
-git clone https://github.com/seu-usuario/skywings-platform.git
-cd skywings-platform
+git clone https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/SkyWings/.git
 ```
 
-### 2. Abra no navegador
-Simplesmente abra o arquivo `index.html` em qualquer navegador moderno.
+### 2. Open in browser
+Simply open the `index.html` file from the 'deliverables' folder in any modern browser.
 
-### 3. Desenvolvimento
-Para desenvolvimento, você pode usar qualquer servidor local. Sugestão com Python:
+### 3. Development
+For development, you can use any local server. Python suggestion:
 
 ```bash
 # Python 3
 python -m http.server 8000
 
-# Ou com npx
+# Or with npx
 npx serve .
 ```
 
-Acesse: `http://localhost:8000`
+Access: `http://localhost:8000`
 
-## 📱 Responsividade
+## 📱 Responsiveness
 
-O site foi desenvolvido com abordagem **mobile-first** e se adapta a:
+The website was developed with a **mobile-first** approach and adapts to:
 
-| Dispositivo | Breakpoint | Características |
-|-------------|------------|-----------------|
-| Mobile | < 576px | Menu hamburguer, single column |
-| Tablet | 576px - 992px | Layout adaptativo, 2 colunas |
-| Desktop | > 992px | Layout completo, 4 colunas |
+| Device | Breakpoint | Characteristics |
+|--------|------------|-----------------|
+| Mobile | < 576px | Hamburger menu, single column |
+| Tablet | 576px - 992px | Adaptive layout, 2 columns |
+| Desktop | > 992px | Full layout, 4 columns |
 
-## 🔧 Funcionalidades JavaScript
+## 🔧 JavaScript Functionalities
 
-### 1. Navegação Mobile
+### 1. Mobile Navigation
 ```javascript
-// Toggle do menu hamburguer
+// Toggle hamburger menu
 mobileMenuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
 });
 ```
 
-### 2. Validação do Formulário
+### 2. Form Validation
 ```javascript
-// Validação básica dos campos obrigatórios
+// Basic validation of required fields
 if (!origin || !destination) {
-    alert('Por favor, preencha a origem e o destino');
+    alert('Please fill in origin and destination');
     return;
 }
 ```
 
-### 3. Configuração de Datas
+### 3. Date Configuration
 ```javascript
-// Configura datas mínimas automaticamente
+// Automatically configures minimum dates
 document.getElementById('departure').min = today;
 document.getElementById('return').min = tomorrowStr;
 ```
 
-## 🎯 Próximas Implementações
+## 🎯 Upcoming Implementations
 
-### Fase 2 (Em desenvolvimento)
-- [ ] Página de resultados de busca
-- [ ] Sistema de filtros avançados
-- [ ] Página de detalhes do voo
-- [ ] Processo de checkout
+### Phase 2 (In development)
+- [ ] Search results page
+- [ ] Advanced filtering system
+- [ ] Flight details page
+- [ ] Checkout process
 
-### Fase 3 (Planejado)
-- [ ] Integração com API de voos
-- [ ] Sistema de login/cadastro
-- [ ] Histórico de buscas
-- [ ] Favoritos e alertas de preço
+### Phase 3 (Planned)
+- [ ] Flight API integration
+- [ ] Login/registration system
+- [ ] Search history
+- [ ] Favorites and price alerts
 
-### Fase 4 (Futuro)
-- [ ] Backend Node.js/Express
-- [ ] Banco de dados PostgreSQL
-- [ ] Sistema de pagamento integrado
-- [ ] App React Native
+### Phase 4 (Future)
+- [ ] Node.js/Express backend
+- [ ] PostgreSQL database
+- [ ] Integrated payment system
+- [ ] React Native app
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está licenciado sob a licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🤝 Contribuindo
+## 🤝 Contributing
 
-Contribuições são bem-vindas! Siga estes passos:
+Contributions are welcome! Follow these steps:
 
-1. Faça um Fork do projeto
-2. Crie uma Branch para sua Feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a Branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 👥 Autores
+## 👥 Authors
 
-- **Márcio F. Reis** - *Desenvolvimento Inicial* - [SeuGitHub](https://github.com/seu-usuario)
+- **Márcio F. Reis** - *Initial Development* - [YourGitHub](https://github.com/your-username)
 
-## 🙏 Agradecimentos
+## 🙏 Acknowledgments
 
-- [Unsplash](https://unsplash.com) pelas imagens incríveis
-- [Font Awesome](https://fontawesome.com) pelos ícones
-- [Google Fonts](https://fonts.google.com) pela tipografia
+- [Unsplash](https://unsplash.com) for amazing images
+- [Font Awesome](https://fontawesome.com) for icons
+- [Google Fonts](https://fonts.google.com) for typography
 
-## 📞 Contato
+## 📞 Contact
 
 Márcio F. Reis - [LinkedIn](https://www.linkedin.com/in/marcio-marine-corps-soldier/)
 
-Link do Projeto: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/new/main/projects/Web-Sites/SkyWings/)
+Project Link: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/new/main/projects/Web-Sites/SkyWings/)
 
 ---
 
-⭐️ Se este projeto foi útil para você, dê uma estrela no repositório!
+⭐️ If this project was useful to you, give it a star on the repository!

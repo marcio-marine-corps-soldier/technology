@@ -1,5 +1,7 @@
 # CryptoPro - Plataforma de Criptomoedas Profissional
 
+<img width="2752" height="1434" alt="Gemini_Generated_Image_h6pf6h6pf6h6pf6h" src="https://github.com/user-attachments/assets/ce3b9054-3ce9-497f-a175-735ebf794051" />
+
 ![CryptoPro Preview](https://img.shields.io/badge/CryptoPro-Professional%20Crypto%20Platform-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
@@ -11,7 +13,7 @@ Uma plataforma completa de criptomoedas desenvolvida com HTML, CSS e JavaScript 
 
 ## 🌟 Demonstração
 
-[![Ver Demonstração](https://img.shields.io/badge/Ver-Demo%20Online-brightgreen)](https://marcio-marine-corps-soldier.github.io/CryptoPro/)
+[![Ver Demonstração](https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/CryptoPro/deliverables/)
 
 ## ✨ Funcionalidades
 

@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SkyWings - Sua plataforma de passagens aéreas</title>
+    <title>SkyWings - Your Flight Booking Platform</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Reset e estilos gerais */
+        /* Reset and general styles */
         * {
             margin: 0;
             padding: 0;
@@ -101,7 +101,7 @@
             color: var(--gray);
         }
         
-        /* Header e Navegação */
+        /* Header and Navigation */
         header {
             background-color: white;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -184,7 +184,7 @@
             margin: 0 auto 40px;
         }
         
-        /* Busca de Passagens */
+        /* Flight Search */
         .search-container {
             background-color: white;
             border-radius: 8px;
@@ -229,7 +229,7 @@
             margin-top: 10px;
         }
         
-        /* Serviços */
+        /* Services */
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -264,7 +264,7 @@
             color: var(--primary);
         }
         
-        /* Destinos */
+        /* Destinations */
         .destinations-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -436,7 +436,7 @@
             font-size: 0.9rem;
         }
         
-        /* Responsividade */
+        /* Responsiveness */
         @media (max-width: 992px) {
             h1 {
                 font-size: 2.5rem;
@@ -514,7 +514,7 @@
     </style>
 </head>
 <body>
-    <!-- Header com navegação -->
+    <!-- Header with navigation -->
     <header>
         <div class="container header-container">
             <a href="#" class="logo">
@@ -527,11 +527,11 @@
             
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#services">Serviços</a></li>
-                <li><a href="#destinations">Destinos</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#destinations">Destinations</a></li>
                 <li><a href="#app">App</a></li>
-                <li><a href="#contact">Contato</a></li>
-                <li><a href="#" class="btn">Minha Conta</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#" class="btn">My Account</a></li>
             </ul>
         </div>
     </header>
@@ -539,145 +539,145 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Voando para o mundo todo</h1>
-            <p>Encontre as melhores passagens aéreas com os preços mais competitivos do mercado. Mais de 500 companhias aéreas e milhares de destinos à sua disposição.</p>
-            <a href="#search" class="btn btn-accent">Buscar Passagens</a>
+            <h1>Flying all over the world</h1>
+            <p>Find the best flight tickets with the most competitive prices on the market. Over 500 airlines and thousands of destinations at your disposal.</p>
+            <a href="#search" class="btn btn-accent">Search Flights</a>
         </div>
     </section>
 
-    <!-- Buscador de Passagens -->
+    <!-- Flight Search -->
     <section id="search">
         <div class="container">
             <div class="search-container">
-                <h3>Encontre sua próxima viagem</h3>
+                <h3>Find your next trip</h3>
                 <form class="search-form">
                     <div class="form-group">
-                        <label for="origin">Origem</label>
-                        <input type="text" id="origin" class="form-control" placeholder="Cidade ou aeroporto de origem">
+                        <label for="origin">Origin</label>
+                        <input type="text" id="origin" class="form-control" placeholder="City or airport of origin">
                     </div>
                     
                     <div class="form-group">
-                        <label for="destination">Destino</label>
-                        <input type="text" id="destination" class="form-control" placeholder="Cidade ou aeroporto de destino">
+                        <label for="destination">Destination</label>
+                        <input type="text" id="destination" class="form-control" placeholder="City or airport of destination">
                     </div>
                     
                     <div class="form-group">
-                        <label for="departure">Ida</label>
+                        <label for="departure">Departure</label>
                         <input type="date" id="departure" class="form-control">
                     </div>
                     
                     <div class="form-group">
-                        <label for="return">Volta</label>
+                        <label for="return">Return</label>
                         <input type="date" id="return" class="form-control">
                     </div>
                     
                     <div class="form-group">
-                        <label for="passengers">Passageiros</label>
+                        <label for="passengers">Passengers</label>
                         <select id="passengers" class="form-control">
-                            <option value="1">1 Passageiro</option>
-                            <option value="2">2 Passageiros</option>
-                            <option value="3">3 Passageiros</option>
-                            <option value="4">4 Passageiros</option>
-                            <option value="5+">5+ Passageiros</option>
+                            <option value="1">1 Passenger</option>
+                            <option value="2">2 Passengers</option>
+                            <option value="3">3 Passengers</option>
+                            <option value="4">4 Passengers</option>
+                            <option value="5+">5+ Passengers</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label for="class">Classe</label>
+                        <label for="class">Class</label>
                         <select id="class" class="form-control">
-                            <option value="economy">Econômica</option>
+                            <option value="economy">Economy</option>
                             <option value="premium">Premium Economy</option>
-                            <option value="business">Executiva</option>
-                            <option value="first">Primeira Classe</option>
+                            <option value="business">Business</option>
+                            <option value="first">First Class</option>
                         </select>
                     </div>
                     
                     <button type="submit" class="btn search-btn">
-                        <i class="fas fa-search"></i> Buscar Voos
+                        <i class="fas fa-search"></i> Search Flights
                     </button>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Serviços -->
+    <!-- Services -->
     <section id="services">
         <div class="container">
-            <h2>Nossos Serviços</h2>
+            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-search-dollar"></i>
                     </div>
-                    <h3>Melhores Preços</h3>
-                    <p>Garantimos os preços mais baixos do mercado com nossa tecnologia de busca avançada que compara centenas de sites em tempo real.</p>
+                    <h3>Best Prices</h3>
+                    <p>We guarantee the lowest prices on the market with our advanced search technology that compares hundreds of sites in real time.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-headset"></i>
                     </div>
-                    <h3>Suporte 24/7</h3>
-                    <p>Nossa equipe de suporte está disponível 24 horas por dia, 7 dias por semana para ajudar com qualquer necessidade antes, durante ou depois da sua viagem.</p>
+                    <h3>24/7 Support</h3>
+                    <p>Our support team is available 24 hours a day, 7 days a week to help with any needs before, during or after your trip.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Compra Segura</h3>
-                    <p>Utilizamos criptografia de última geração para proteger seus dados e oferecemos garantia de reembolso em caso de cancelamento por parte das companhias aéreas.</p>
+                    <h3>Secure Purchase</h3>
+                    <p>We use state-of-the-art encryption to protect your data and offer refund guarantees in case of cancellation by airlines.</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">
                         <i class="fas fa-route"></i>
                     </div>
-                    <h3>Roteiros Personalizados</h3>
-                    <p>Criamos roteiros de viagem personalizados com múltiplos destinos, hospedagem e atividades para tornar sua experiência única.</p>
+                    <h3>Custom Itineraries</h3>
+                    <p>We create personalized travel itineraries with multiple destinations, accommodation and activities to make your experience unique.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Destinos Populares -->
+    <!-- Popular Destinations -->
     <section id="destinations">
         <div class="container">
-            <h2>Destinos Populares</h2>
+            <h2>Popular Destinations</h2>
             <div class="destinations-grid">
                 <div class="destination-card">
                     <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paris">
                     <div class="destination-info">
-                        <h3>Paris, França</h3>
-                        <p>A cidade do amor e da luz</p>
-                        <span class="price-tag">A partir de R$ 2.450</span>
+                        <h3>Paris, France</h3>
+                        <p>The city of love and light</p>
+                        <span class="price-tag">From $490</span>
                     </div>
                 </div>
                 
                 <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nova York">
+                    <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New York">
                     <div class="destination-info">
-                        <h3>Nova York, EUA</h3>
-                        <p>A cidade que nunca dorme</p>
-                        <span class="price-tag">A partir de R$ 3.150</span>
+                        <h3>New York, USA</h3>
+                        <p>The city that never sleeps</p>
+                        <span class="price-tag">From $630</span>
                     </div>
                 </div>
                 
                 <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tóquio">
+                    <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tokyo">
                     <div class="destination-info">
-                        <h3>Tóquio, Japão</h3>
-                        <p>Tradição e modernidade</p>
-                        <span class="price-tag">A partir de R$ 4.850</span>
+                        <h3>Tokyo, Japan</h3>
+                        <p>Tradition and modernity</p>
+                        <span class="price-tag">From $970</span>
                     </div>
                 </div>
                 
                 <div class="destination-card">
                     <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rio de Janeiro">
                     <div class="destination-info">
-                        <h3>Rio de Janeiro, Brasil</h3>
-                        <p>Cidade maravilhosa</p>
-                        <span class="price-tag">A partir de R$ 680</span>
+                        <h3>Rio de Janeiro, Brazil</h3>
+                        <p>Wonderful city</p>
+                        <span class="price-tag">From $136</span>
                     </div>
                 </div>
             </div>
@@ -689,9 +689,9 @@
         <div class="container">
             <div class="app-content">
                 <div class="app-text">
-                    <h2>Baixe nosso app</h2>
-                    <p>Com o aplicativo SkyWings, você pode buscar, comparar e reservar passagens aéreas diretamente do seu celular. Receba alertas de preços, faça check-in online e acesse seus bilhetes mesmo offline.</p>
-                    <p>Disponível para iOS e Android, nosso app foi classificado como o melhor app de viagens por 3 anos consecutivos.</p>
+                    <h2>Download our app</h2>
+                    <p>With the SkyWings app, you can search, compare and book flight tickets directly from your phone. Receive price alerts, check in online and access your tickets even offline.</p>
+                    <p>Available for iOS and Android, our app has been rated as the best travel app for 3 consecutive years.</p>
                     
                     <div class="app-badges">
                         <a href="#" class="badge">
@@ -704,7 +704,7 @@
                 </div>
                 
                 <div class="app-image">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Aplicativo SkyWings">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SkyWings App">
                 </div>
             </div>
         </div>
@@ -716,7 +716,7 @@
             <div class="footer-content">
                 <div class="footer-column">
                     <h3>SkyWings</h3>
-                    <p>Sua plataforma completa para compra de passagens aéreas. Conectamos você aos melhores destinos com preços competitivos e serviço excepcional.</p>
+                    <p>Your complete platform for flight ticket purchases. We connect you to the best destinations with competitive prices and exceptional service.</p>
                     <div class="social-icons">
                         <a href="#"><i class="fab fa-facebook-f"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
@@ -726,46 +726,46 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Links Rápidos</h3>
+                    <h3>Quick Links</h3>
                     <ul class="footer-links">
                         <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#destinations">Destinos</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#destinations">Destinations</a></li>
                         <li><a href="#app">App</a></li>
-                        <li><a href="#">Sobre Nós</a></li>
+                        <li><a href="#">About Us</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Suporte</h3>
+                    <h3>Support</h3>
                     <ul class="footer-links">
-                        <li><a href="#">Central de Ajuda</a></li>
-                        <li><a href="#">Cancelamentos</a></li>
-                        <li><a href="#">Política de Reembolso</a></li>
-                        <li><a href="#">Termos de Uso</a></li>
-                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Cancellations</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h3>Contato</h3>
+                    <h3>Contact</h3>
                     <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
-                        <li><i class="fas fa-phone"></i> (11) 4002-8922</li>
-                        <li><i class="fas fa-envelope"></i> contato@skywings.com</li>
-                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h-20h | Sáb: 9h-16h</li>
+                        <li><i class="fas fa-map-marker-alt"></i> City of Los Angeles, CA - US</li>
+                        <li><i class="fas fa-phone"></i> +1 (212) 555-5555</li>
+                        <li><i class="fas fa-envelope"></i> contact@skywings.com</li>
+                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am-8pm | Sat: 9am-4pm</li>
                     </ul>
                 </div>
             </div>
             
             <div class="copyright">
-                <p>&copy; 2026 SkyWings. Todos os direitos reservados.</p>
+                <p>&copy; 2026 SkyWings. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Menu mobile
+        // Mobile menu
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const navLinks = document.getElementById('navLinks');
         
@@ -781,7 +781,7 @@
             }
         });
         
-        // Fechar menu ao clicar em um link
+        // Close menu when clicking a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 navLinks.classList.remove('active');
@@ -791,7 +791,7 @@
             });
         });
         
-        // Simulação de busca de passagens
+        // Flight search simulation
         const searchForm = document.querySelector('.search-form');
         searchForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -800,17 +800,17 @@
             const destination = document.getElementById('destination').value;
             
             if (!origin || !destination) {
-                alert('Por favor, preencha a origem e o destino para buscar passagens.');
+                alert('Please fill in the origin and destination to search for flights.');
                 return;
             }
             
-            alert(`Buscando passagens de ${origin} para ${destination}... Em um site real, esta funcionalidade conectaria com uma API de busca de passagens.`);
+            alert(`Searching for flights from ${origin} to ${destination}... On a real site, this feature would connect to a flight search API.`);
             
-            // Simulação de redirecionamento para página de resultados
-            // window.location.href = `resultados.html?origem=${origin}&destino=${destination}`;
+            // Simulation of redirecting to results page
+            // window.location.href = `results.html?origin=${origin}&destination=${destination}`;
         });
         
-        // Definir datas mínimas para os campos de data
+        // Set minimum dates for date fields
         const today = new Date().toISOString().split('T')[0];
         const tomorrow = new Date();
         tomorrow.setDate(tomorrow.getDate() + 1);

@@ -166,19 +166,12 @@ O site se adapta a diferentes tamanhos de tela:
 1. Faça push para seu repositório
 2. Vá em Settings → Pages
 3. Selecione branch main
-4. Acesse: `https://seuusuario.github.io/soundcraft`
+4. Acesse: `https://github.com/seu-usuario/technology/edit/gh-pages/projects/Web-Sites/SoundCraft-Studios/README.md`
 
 ### Outras Opções
 - **Netlify**: Arraste a pasta para o site
 - **Vercel**: Conecte com GitHub
 - **Hostinger/Firebase**: Upload via FTP
-
-## 📞 Suporte
-
-Para suporte ou dúvidas:
-- **E-mail**: contato@soundcraft.com
-- **Telefone**: (11) 99999-9999
-- **Endereço**: Av. Paulista, 1374 - São Paulo, SP
 
 ## 🤝 Contribuição
 
@@ -207,6 +200,12 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para de
 - **Seções**: 8 principais
 - **Imagens**: 10+ otimizadas
 - **Tempo de desenvolvimento**: 6-8 horas
+
+## 📞 Contato
+
+- **Márcio F. Reis** - [LinkedIn](https://www.linkedin.com/in/marcio-marine-corps-soldier/)
+
+- **Link do Projeto**: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/new/main/projects/Web-Sites/SkyWings/)
 
 ---
 

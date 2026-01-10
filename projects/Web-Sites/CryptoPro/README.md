@@ -1,6 +1,6 @@
-# CryptoPro - Plataforma de Criptomoedas Profissional
+# CryptoPro - Professional Cryptocurrency Platform
 
-<img width="2752" height="1434" alt="Gemini_Generated_Image_h6pf6h6pf6h6pf6h" src="https://github.com/user-attachments/assets/ce3b9054-3ce9-497f-a175-735ebf794051" />
+<img width="2752" height="1434" alt="Gemini_Generated_Image_h6pf6h6pf6h6pf6h" src="https://github.com/user-attachments/assets/4fbfcc2e-5f4c-4135-b935-26d47a6c6613" />
 
 ![CryptoPro Preview](https://img.shields.io/badge/CryptoPro-Professional%20Crypto%20Platform-blue)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
@@ -9,207 +9,206 @@
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-Uma plataforma completa de criptomoedas desenvolvida com HTML, CSS e JavaScript puro, inspirada nas principais corretoras do mercado como Binance.
+A complete cryptocurrency platform developed with pure HTML, CSS and JavaScript, inspired by leading exchanges like Binance.
 
-## 🌟 Demonstração
+## 🌟 Demo
 
-[![Ver Demonstração](https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/CryptoPro/deliverables/)
+[![View Demo](https://img.shields.io/badge/View-Live%20Demo-brightgreen)](https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/CryptoPro/deliverables/)
 
-## ✨ Funcionalidades
+## ✨ Features
 
-### 📱 Interface Moderna
-- **Design Responsivo** - Adaptável para desktop, tablet e mobile
-- **Paleta Preto/Azul** - Design profissional e sofisticado
-- **Animações Suaves** - Transições e efeitos visuais modernos
-- **Navegação Intuitiva** - Menu com rolagem suave entre seções
+### 📱 Modern Interface
+- **Responsive Design** - Adaptable for desktop, tablet and mobile
+- **Black/Blue Palette** - Professional and sophisticated design
+- **Smooth Animations** - Modern transitions and visual effects
+- **Intuitive Navigation** - Menu with smooth scrolling between sections
 
-### 💼 Seções Principais
-1. **Hero Section** - Apresentação impactante com dados de mercado simulados
-2. **Trade Anywhere** - Download do app mobile e versões desktop
-3. **Features** - 6 razões para escolher a plataforma
-4. **Market Data** - Cotações em tempo real com atualização simulada
-5. **FAQ** - Accordion interativo com 6 perguntas frequentes
-6. **CTA Final** - Chamada para ação otimizada
+### 💼 Main Sections
+1. **Hero Section** - Impactful presentation with simulated market data
+2. **Trade Anywhere** - Mobile app download and desktop versions
+3. **Features** - 6 reasons to choose the platform
+4. **Market Data** - Real-time quotes with simulated updates
+5. **FAQ** - Interactive accordion with 6 frequently asked questions
+6. **Final CTA** - Optimized call to action
 
-### 🔄 Funcionalidades Interativas
-- **Simulação de Mercado** - Dados de criptomoedas atualizados periodicamente
-- **FAQ Accordion** - Sistema de perguntas/respostas expansível
-- **Formulários Interativos** - Botões com feedback visual
-- **Animações Scroll** - Elementos aparecem suavemente durante a rolagem
+### 🔄 Interactive Features
+- **Market Simulation** - Periodically updated cryptocurrency data
+- **FAQ Accordion** - Expandable question/answer system
+- **Interactive Forms** - Buttons with visual feedback
+- **Scroll Animations** - Elements appear smoothly during scrolling
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **HTML5** - Estrutura semântica e moderna
-- **CSS3** - Estilização avançada com variáveis CSS, Grid e Flexbox
-- **JavaScript Vanilla** - Interatividade sem bibliotecas externas
-- **Font Awesome** - Ícones profissionais
-- **Google Fonts** - Tipografia Inter para melhor legibilidade
-- **Design Responsivo** - Mobile-first com media queries
+- **HTML5** - Semantic and modern structure
+- **CSS3** - Advanced styling with CSS variables, Grid and Flexbox
+- **Vanilla JavaScript** - Interactivity without external libraries
+- **Font Awesome** - Professional icons
+- **Google Fonts** - Inter typography for better readability
+- **Responsive Design** - Mobile-first with media queries
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-### Instalação Local
+### Local Installation
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/CryptoPro/
 ```
 
 Note: For local viewing, simply open the `index.html` file in the `deliverables` folder in any browser.
 
-# Ou use um servidor local como:
+# Or use a local server like:
 python -m http.server 8000
 
-### Estrutura do Projeto
+### Project Structure
 ```
 CryptoPro/
 ├── deliverables/
-|    └── index.html          # Arquivo principal
-├── README.md           # Este arquivo
-└── assets/             # (Opcional) Pasta para recursos
-    ├── images/         # Imagens e ícones
-    └── css/            # Estilos adicionais
+|    └── index.html          # Main file
+├── README.md           # This file
+└── assets/             # (Optional) Resources folder
+    ├── images/         # Images and icons
+    └── css/            # Additional styles
 ```
 
-## 📱 Seções em Destaque
+## 📱 Highlighted Sections
 
-### 1. **Cabeçalho Profissional**
-- Logo personalizada com ícone de moedas
-- Navegação principal com 6 links
-- Botões de Login e Criar Conta
+### 1. **Professional Header**
+- Custom logo with coin icon
+- Main navigation with 6 links
+- Login and Create Account buttons
 
-### 2. **Dados de Mercado em Tempo Real**
-- 5 criptomoedas principais (BTC, ETH, SOL, XRP, BNB)
-- Preços, variações e volumes atualizados
-- Botões de ação "Comprar" integrados
+### 2. **Real-time Market Data**
+- 5 main cryptocurrencies (BTC, ETH, SOL, XRP, BNB)
+- Updated prices, variations and volumes
+- Integrated "Buy" action buttons
 
-### 3. **App Multiplataforma**
-- QR Code para download mobile
-- Disponibilidade para iOS e Android
-- Versões desktop: Windows, macOS, Linux
+### 3. **Multi-platform App**
+- QR Code for mobile download
+- Availability for iOS and Android
+- Desktop versions: Windows, macOS, Linux
 
-### 4. **Features Completas**
-- Segurança institucional
-- Transações ultra-rápidas
-- Ferramentas avançadas de trading
-- Suporte global 24/7
-- Taxas competitivas
-- App móvel premium
+### 4. **Complete Features**
+- Institutional security
+- Ultra-fast transactions
+- Advanced trading tools
+- Global 24/7 support
+- Competitive fees
+- Premium mobile app
 
-## 🎨 Design e UX
+## 🎨 Design and UX
 
-### Paleta de Cores
-- **Primária:** `#1e40af` (Azul Profissional)
-- **Secundária:** `#000000` (Preto Elegante)
-- **Destaques:** `#10b981` (Verde/Sucesso), `#ef4444` (Vermelho/Perda)
-- **Neutras:** Tons de cinza para texto e fundos
+### Color Palette
+- **Primary:** `#1e40af` (Professional Blue)
+- **Secondary:** `#000000` (Elegant Black)
+- **Highlights:** `#10b981` (Green/Success), `#ef4444` (Red/Loss)
+- **Neutrals:** Gray tones for text and backgrounds
 
-### Tipografia
-- **Fonte Principal:** Inter (Google Fonts)
-- **Hierarquia clara** com pesos de 300 a 800
-- **Legibilidade otimizada** para leitura prolongada
+### Typography
+- **Main Font:** Inter (Google Fonts)
+- **Clear hierarchy** with weights from 300 to 800
+- **Optimized readability** for prolonged reading
 
-### Responsividade
-- **Mobile First** - Design otimizado para dispositivos móveis
-- **Breakpoints** estratégicos para tablet e desktop
-- **Imagens e tabelas** responsivas
+### Responsiveness
+- **Mobile First** - Design optimized for mobile devices
+- **Strategic breakpoints** for tablet and desktop
+- **Responsive images and tables**
 
-## 🔧 Personalização
+## 🔧 Customization
 
-### Modificando Cores
-Edite as variáveis CSS no início do arquivo HTML:
+### Modifying Colors
+Edit CSS variables at the beginning of the HTML file:
 ```css
 :root {
-    --primary: #1e40af;      /* Azul principal */
-    --primary-dark: #1e3a8a; /* Azul escuro */
-    --black: #000000;        /* Preto */
-    /* ... outras cores */
+    --primary: #1e40af;      /* Main blue */
+    --primary-dark: #1e3a8a; /* Dark blue */
+    --black: #000000;        /* Black */
+    /* ... other colors */
 }
 ```
 
-### Adicionando Criptomoedas
-Para adicionar mais criptomoedas à tabela:
+### Adding Cryptocurrencies
+To add more cryptocurrencies to the table:
 ```html
 <tr>
     <td>
         <div class="coin-info">
             <div class="coin-icon" style="background-color: #COLOR;">S</div>
             <div>
-                <div>Nome da Moeda</div>
-                <div style="font-size: 0.9rem; color: var(--gray);">SÍMBOLO</div>
+                <div>Coin Name</div>
+                <div style="font-size: 0.9rem; color: var(--gray);">SYMBOL</div>
             </div>
         </div>
     </td>
-    <td>$ PREÇO</td>
+    <td>$ PRICE</td>
     <td class="price-up">+ X%</td>
     <td>$ VOLUME</td>
     <td>$ MARKET CAP</td>
-    <td><button class="btn btn-primary">Comprar</button></td>
+    <td><button class="btn btn-primary">Buy</button></td>
 </tr>
 ```
 
-### Atualizando FAQ
-Adicione novas perguntas/respostas:
+### Updating FAQ
+Add new questions/answers:
 ```html
 <div class="faq-item fade-in">
     <div class="faq-question">
-        <span>Pergunta?</span>
+        <span>Question?</span>
         <i class="fas fa-plus"></i>
     </div>
     <div class="faq-answer">
-        <p>Resposta detalhada.</p>
+        <p>Detailed answer.</p>
     </div>
 </div>
 ```
 
-## 📈 Otimizações Futuras
+## 📈 Future Optimizations
 
-### Melhorias Planejadas
-- [ ] API real de criptomoedas
-- [ ] Sistema de login funcional
-- [ ] Dashboard de usuário
-- [ ] Calculadora de conversão
-- [ ] Modo escuro/claro
-- [ ] Internacionalização (i18n)
+### Planned Improvements
+- [ ] Real cryptocurrency API
+- [ ] Functional login system
+- [ ] User dashboard
+- [ ] Conversion calculator
+- [ ] Dark/light mode
+- [ ] Internationalization (i18n)
 
-### Para Produção
-1. **Separar CSS/JS** em arquivos externos
-2. **Otimizar imagens** com WebP
-3. **Implementar SEO** completo
-4. **Adicionar analytics** (Google Analytics)
-5. **Testes cross-browser**
+### For Production
+1. **Separate CSS/JS** into external files
+2. **Optimize images** with WebP
+3. **Implement complete SEO**
+4. **Add analytics** (Google Analytics)
+5. **Cross-browser testing**
 
-## 🤝 Contribuição
+## 🤝 Contributing
 
-Contribuições são bem-vindas! Siga estes passos:
+Contributions are welcome! Follow these steps:
 
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/NovaFuncionalidade`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
-4. Push para a branch (`git push origin feature/NovaFuncionalidade`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a branch (`git checkout -b feature/NewFeature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to the branch (`git push origin feature/NewFeature`)
+5. Open a Pull Request
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
 
-## 👤 Autor
+## 👤 Author
 
-**Marcio Marine Corps Soldier**
+**Marcio F. Reis**
 
-- GitHub: [@marcio-marine-corps-soldier](https://github.com/marcio-marine-corps-soldier)
 - LinkedIn: [Marcio Marine Corps Soldier](https://www.linkedin.com/in/marcio-marine-corps-soldier/)
-- Portfólio: [Veja mais projetos](https://github.com/marcio-marine-corps-soldier)
+- GitHub: [@marcio-marine-corps-soldier](https://github.com/marcio-marine-corps-soldier)
 
-## 🙏 Agradecimentos
+## 🙏 Acknowledgments
 
-- Ícones por [Font Awesome](https://fontawesome.com)
-- Fontes por [Google Fonts](https://fonts.google.com)
-- Inspiração por [Binance](https://binance.com) e outras platafermas
-- Comunidade de desenvolvimento web
+- Icons by [Font Awesome](https://fontawesome.com)
+- Fonts by [Google Fonts](https://fonts.google.com)
+- Inspiration from [Binance](https://binance.com) and other platforms
+- Web development community
 
 ---
 
-⭐ **Se você gostou deste projeto, deixe uma estrela no repositório!** ⭐
+⭐ **If you liked this project, leave a star on the repository!** ⭐
 
 ---
 
@@ -217,8 +216,11 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 Márcio F. Reis - [LinkedIn](https://linkedin.com/marcio-marine-corps-soldier)
 
-Project Link: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/tree/main/projects/Web-Sites/SuperMarket-Connect/)
+Project Link: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/tree/main/projects/Web-Sites/CryptoPro/)
 
 ---
 
-**CryptoPro** - Plataforma profissional de criptomoedas desenvolvida com as melhores práticas de desenvolvimento web moderno.
+**CryptoPro** - Professional cryptocurrency platform developed with modern web development best practices.
+
+---
+*Last updated: March 2024*

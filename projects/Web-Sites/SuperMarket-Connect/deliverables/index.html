@@ -463,6 +463,37 @@
             flex-shrink: 0;
         }
 
+        /* Estilo para o bloco de endereço */
+        .address {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .address i {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-light);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        .address h4 {
+            margin: 0 0 5px 0;
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .address p {
+            margin: 0;
+            color: var(--gray);
+        }
+
         .contact-form input,
         .contact-form textarea {
             width: 100%;
@@ -917,6 +948,15 @@
                         <div>
                             <h4>Service Hours</h4>
                             <p>Monday to Friday: 8am to 6pm</p>
+                        </div>
+                    </div>
+
+                    <!-- NOVO BLOCO DE ENDEREÇO ADICIONADO -->
+                    <div class="address">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Address</h4>
+                            <p>City of Los Angeles, CA - US</p>
                         </div>
                     </div>
                 </div>

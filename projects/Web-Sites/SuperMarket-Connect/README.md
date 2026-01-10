@@ -1,165 +1,165 @@
-# SuperMarket Connect - Plataforma de Serviços de Venda
+# SuperMarket Connect - Sales Services Platform
 
 <img width="3392" height="1248" alt="Gemini_Generated_Image_8ocn928ocn928ocn" src="https://github.com/user-attachments/assets/7f9654ae-3a77-4ee8-8f5f-80409ae6e06c" />
 
-![SuperMarket Connect](https://img.shields.io/badge/Status-Completo-brightgreen)
+![SuperMarket Connect](https://img.shields.io/badge/Status-Complete-brightgreen)
 ![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
-Site profissional completo para uma plataforma de serviços de venda de mercado, com design moderno, responsivo e funcionalidades interativas.
+Complete professional website for a supermarket sales services platform, with modern design, responsive layout, and interactive functionalities.
 
-## 🌐 Demonstração
+## 🌐 Live Demo
 
-O site está hospedado e pode ser visualizado em: [SuperMarket Connect - Live Demo](#)
+The site is hosted and can be viewed at: [SuperMarket Connect - Live Demo](#)
 
-*(Nota: Para visualização local, basta abrir o arquivo `index.html` em qualquer navegador)*
+*(Note: For local viewing, simply open the `index.html` file in the `deliverables` folder in any browser.)*
 
-## ✨ Funcionalidades
+## ✨ Features
 
-- **Design Responsivo**: Adapta-se perfeitamente a desktops, tablets e smartphones
-- **Navegação Intuitiva**: Menu fixo com rolagem suave entre seções
-- **Seções Completas**:
-  - Hero section com chamada para ação
-  - Apresentação dos serviços oferecidos
-  - Explicação passo a passo de como funciona
-  - Benefícios para os clientes
-  - Depoimentos com slider interativo
-  - Formulário de contato funcional
-- **Interatividade**:
-  - Slider de depoimentos automático
-  - Efeitos hover em botões e cards
-  - Formulário de contato com validação
-  - Menu mobile responsivo
+- **Responsive Design**: Perfectly adapts to desktops, tablets, and smartphones
+- **Intuitive Navigation**: Fixed menu with smooth scrolling between sections
+- **Complete Sections**:
+  - Hero section with call to action
+  - Presentation of offered services
+  - Step-by-step explanation of how it works
+  - Benefits for customers
+  - Testimonials with interactive slider
+  - Functional contact form
+- **Interactivity**:
+  - Automatic testimonial slider
+  - Hover effects on buttons and cards
+  - Contact form with validation
+  - Responsive mobile menu
 
-## 🛠️ Tecnologias Utilizadas
+## 🛠️ Technologies Used
 
-- **HTML5**: Estrutura semântica do site
-- **CSS3**: Estilização avançada com Flexbox e Grid
-- **JavaScript**: Interatividade e funcionalidades dinâmicas
-- **Font Awesome**: Ícones profissionais
-- **Google Fonts**: Tipografia moderna
+- **HTML5**: Semantic website structure
+- **CSS3**: Advanced styling with Flexbox and Grid
+- **JavaScript**: Interactivity and dynamic functionalities
+- **Font Awesome**: Professional icons
+- **Google Fonts**: Modern typography
 
 ## 🎨 Design
 
-- **Paleta de Cores**:
-  - Verde (#2e7d32): Representa produtos frescos e naturais
-  - Laranja (#ff9800): Chama atenção para ações importantes
-  - Branco com transparência: Para melhor legibilidade sobre imagens
+- **Color Palette**:
+  - Green (#2e7d32): Represents fresh and natural products
+  - Orange (#ff9800): Draws attention to important actions
+  - White with transparency: For better readability over images
 
-- **Imagens de Fundo**:
-  - Imagem principal: Mercado organizado com produtos
-  - Hero section: Foco em compras online e delivery
-  - Todas as imagens são de alta qualidade e otimizadas
+- **Background Images**:
+  - Main image: Organized market with products
+  - Hero section: Focus on online shopping and delivery
+  - All images are high-quality and optimized
 
-## 📱 Responsividade
+## 📱 Responsiveness
 
-O site foi desenvolvido com mobile-first approach e se adapta a:
+The site was developed with mobile-first approach and adapts to:
 
-- **Desktop**: Layout completo com todas as funcionalidades
-- **Tablet**: Ajuste de grids e tamanhos de fonte
-- **Mobile**: Menu hamburguer, layout simplificado
+- **Desktop**: Complete layout with all functionalities
+- **Tablet**: Grid adjustments and font sizes
+- **Mobile**: Hamburger menu, simplified layout
 
-## 🚀 Como Usar
+## 🚀 How to Use
 
-### 1. Visualização Online
-Acesse o link de demonstração (se disponível) ou:
+### 1. Online Viewing
+Access the demo link (if available) or:
 
-### 2. Execução Local
+### 2. Local Execution
 ```bash
-# Clone o repositório
+# Clone the repository
 git clone https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/SuperMarket-Connect.git
 
-# Abra o arquivo index.html da pasta deliverables no navegador
-# Ou use um servidor local como:
+# Open the index.html file from the deliverables folder in your browser
+# Or use a local server like:
 python -m http.server 8000
 ```
 
-### 3. Personalização
-Para personalizar o site:
+### 3. Customization
+To customize the site:
 
-1. **Imagens**: Substitua as URLs das imagens no CSS
-2. **Cores**: Modifique as variáveis CSS na seção `:root`
-3. **Conteúdo**: Edite o texto diretamente no HTML
-4. **Funcionalidades**: Modifique o JavaScript conforme necessário
+1. **Images**: Replace image URLs in the CSS
+2. **Colors**: Modify CSS variables in the `:root` section
+3. **Content**: Edit text directly in the HTML
+4. **Functionalities**: Modify JavaScript as needed
 
-## 📁 Estrutura do Projeto
+## 📁 Project Structure
 
 ```
 SuperMarket-Connect/
 │
 ├── deliverables/
-|    └── index.html              # Arquivo principal HTML
+|    └── index.html              # Main HTML file
 │
-├── README.md               # Este arquivo
+├── README.md               # This file
 │
-└── assets/                 # (Opcional) Pasta para recursos adicionais
-    ├── images/             # Imagens locais
-    ├── css/                # Estilos adicionais
-    └── js/                 # Scripts adicionais
+└── assets/                 # (Optional) Folder for additional resources
+    ├── images/             # Local images
+    ├── css/                # Additional styles
+    └── js/                 # Additional scripts
 ```
 
-## 🧩 Seções do Site
+## 🧩 Website Sections
 
-1. **Header**: Logo e navegação fixa
-2. **Hero**: Apresentação principal com CTA
-3. **Serviços**: 6 cards com serviços oferecidos
-4. **Como Funciona**: 4 etapas do processo
-5. **Benefícios**: 6 vantagens da plataforma
-6. **Depoimentos**: Slider com feedbacks de clientes
-7. **Contato**: Formulário e informações de contato
-8. **Footer**: Links úteis e redes sociais
+1. **Header**: Logo and fixed navigation
+2. **Hero**: Main presentation with CTA
+3. **Services**: 6 cards with offered services
+4. **How It Works**: 4 process steps
+5. **Benefits**: 6 platform advantages
+6. **Testimonials**: Slider with customer feedback
+7. **Contact**: Form and contact information
+8. **Footer**: Useful links and social media
 
-## 🔧 Funcionalidades JavaScript
+## 🔧 JavaScript Functionalities
 
-- **Menu Mobile**: Alternância entre aberto/fechado
-- **Slider de Depoimentos**: Automático com controles manuais
-- **Formulário**: Validação básica e mensagem de confirmação
-- **Scroll Suave**: Navegação entre seções
-- **Efeitos Visuais**: Animações e transições
+- **Mobile Menu**: Toggle between open/closed
+- **Testimonial Slider**: Automatic with manual controls
+- **Form**: Basic validation and confirmation message
+- **Smooth Scroll**: Navigation between sections
+- **Visual Effects**: Animations and transitions
 
-## 📝 Características Técnicas
+## 📝 Technical Characteristics
 
-- **Código Limpo**: HTML semântico, CSS organizado, JavaScript comentado
-- **Performance**: Imagens otimizadas, código minificado
-- **Acessibilidade**: HTML semântico, contraste adequado
-- **SEO**: Meta tags, headings hierárquicos
-- **Cross-browser**: Compatível com Chrome, Firefox, Safari, Edge
+- **Clean Code**: Semantic HTML, organized CSS, commented JavaScript
+- **Performance**: Optimized images, minified code
+- **Accessibility**: Semantic HTML, proper contrast
+- **SEO**: Meta tags, hierarchical headings
+- **Cross-browser**: Compatible with Chrome, Firefox, Safari, Edge
 
-## 🎯 Público-Alvo
+## 🎯 Target Audience
 
-- Proprietários de mercados e supermercados
-- Gerentes de varejo alimentício
-- Empresários do setor de alimentos
-- Investidores em tecnologia para varejo
+- Supermarket and grocery store owners
+- Food retail managers
+- Food sector entrepreneurs
+- Retail technology investors
 
-## 🤝 Contribuição
+## 🤝 Contribution
 
-Contribuições são bem-vindas! Siga estes passos:
+Contributions are welcome! Follow these steps:
 
-1. Faça um Fork do projeto
-2. Crie uma Branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a Branch (`git push origin feature/AmazingFeature`)
-5. Abra um Pull Request
+1. Fork the project
+2. Create a Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-## 📄 Licença
+## 📄 License
 
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+This project is under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## 📞 Contato
+## 📞 Contact
 
 Márcio F. Reis - [LinkedIn](https://linkedin.com/marcio-marine-corps-soldier)
 
-Link do Projeto: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/tree/main/projects/Web-Sites/SuperMarker-Connect/)
+Project Link: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/tree/main/projects/Web-Sites/SuperMarket-Connect/)
 
-## 🙏 Agradecimentos
+## 🙏 Acknowledgments
 
-- Imagens: [Unsplash](https://unsplash.com)
-- Ícones: [Font Awesome](https://fontawesome.com)
-- Fontes: [Google Fonts](https://fonts.google.com)
+- Images: [Unsplash](https://unsplash.com)
+- Icons: [Font Awesome](https://fontawesome.com)
+- Fonts: [Google Fonts](https://fonts.google.com)
 - Badges: [Shields.io](https://shields.io)
 
 ---
 
-⭐ Se você gostou deste projeto, dê uma estrela no repositório!
+⭐ If you liked this project, give it a star on the repository!

@@ -53,8 +53,9 @@ Acesse: `http://localhost:8000`
 ## 📁 Estrutura do Código
 
 ```
-soundcraft/
-├── index.html
+SoundCraft-Studios/
+├── deliverables/
+|    └── index.html
 ├── README.md
 └── Estrutura das seções:
     ├── Header (Navegação fixa)

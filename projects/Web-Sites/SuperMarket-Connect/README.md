@@ -9,9 +9,9 @@
 
 Complete professional website for a supermarket sales services platform, with modern design, responsive layout, and interactive functionalities.
 
-## 🌐 Live Demo
+## 🌟 Demo
 
-The site is hosted and can be viewed at: [SuperMarket Connect - Live Demo](#)
+[![View Demo](https://img.shields.io/badge/View-Live%20Demo-brightgreen)](https://github.com/marcio-marine-corps-soldier/technology/blob/main/projects/Web-Sites/SuperMarket-Connect/assets/FireShot%20Capture%20007%20-%20SuperMarket%20Connect%20-%20Sales%20Services%20Platform%20-%20%5B%5D.png)
 
 *(Note: For local viewing, simply open the `index.html` file in the `deliverables` folder in any browser.)*
 
@@ -63,14 +63,13 @@ The site was developed with mobile-first approach and adapts to:
 ## 🚀 How to Use
 
 ### 1. Online Viewing
-Access the demo link (if available) or:
+Access the demo link or:
 
 ### 2. Local Execution
 ```bash
 # Clone the repository
 git clone https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/SuperMarket-Connect.git
 
-# Open the index.html file from the deliverables folder in your browser
 # Or use a local server like:
 python -m http.server 8000
 ```

@@ -1,0 +1,1506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CryptoPro - Cryptocurrency Platform</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e40af; /* Strong blue */
+            --primary-dark: #1e3a8a;
+            --primary-light: #3b82f6;
+            --black: #000000;
+            --dark: #111827;
+            --gray-dark: #374151;
+            --gray: #6b7280;
+            --gray-light: #9ca3af;
+            --light: #f9fafb;
+            --accent: #f59e0b; /* Only for minimal highlights */
+            --danger: #ef4444;
+            --success: #10b981;
+            --border: #e5e7eb;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--dark);
+            background-color: white;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--black);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: white;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--primary-light);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s;
+            opacity: 0.9;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-light);
+            opacity: 1;
+        }
+        
+        .header-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .btn {
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 0.95rem;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-outline:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(30, 64, 175, 0.1));
+        }
+        
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-text {
+            flex: 1;
+            max-width: 600px;
+        }
+        
+        .hero-image {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .hero-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+        }
+        
+        h1 {
+            font-size: 3.2rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: var(--gray-light);
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        /* Section Title */
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+        
+        .section-title p {
+            color: var(--gray);
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        /* Trade Anywhere Section */
+        .trade-anywhere {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .trade-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+        
+        .trade-text {
+            flex: 1;
+        }
+        
+        .trade-text h2 {
+            font-size: 3rem;
+            margin-bottom: 25px;
+            font-weight: 800;
+            line-height: 1.2;
+            color: var(--black);
+        }
+        
+        .trade-text p {
+            font-size: 1.3rem;
+            color: var(--gray-dark);
+            margin-bottom: 40px;
+            line-height: 1.7;
+        }
+        
+        .platforms {
+            margin-top: 40px;
+        }
+        
+        .platforms h3 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--gray-dark);
+            font-weight: 600;
+        }
+        
+        .platform-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .badge {
+            background-color: var(--dark);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .badge i {
+            font-size: 1.2rem;
+        }
+        
+        .app-download {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--light);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--border);
+        }
+        
+        .qr-code {
+            width: 200px;
+            height: 200px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid var(--border);
+        }
+        
+        .qr-code img {
+            max-width: 100%;
+        }
+        
+        .app-download h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--black);
+            text-align: center;
+        }
+        
+        .app-download p {
+            color: var(--gray);
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 1.1rem;
+        }
+        
+        .store-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+        
+        .store-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--black);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        
+        .store-btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-2px);
+        }
+        
+        .store-btn i {
+            font-size: 1.5rem;
+        }
+        
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature-card {
+            background-color: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-lg);
+            border-color: var(--primary-light);
+        }
+        
+        .feature-icon {
+            font-size: 2.8rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+        }
+        
+        .feature-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--black);
+        }
+        
+        /* Market Data Section */
+        .market-data {
+            padding: 100px 0;
+            background-color: var(--light);
+        }
+        
+        .market-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+        
+        .market-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--black);
+        }
+        
+        .market-table {
+            overflow-x: auto;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        th {
+            background-color: #f9fafb;
+            font-weight: 700;
+            color: var(--gray-dark);
+            font-size: 1rem;
+        }
+        
+        .coin-info {
+            display: flex;
+            align-items: center;
+        }
+        
+        .coin-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+            font-size: 1rem;
+        }
+        
+        .price-up {
+            color: var(--success);
+            font-weight: 600;
+        }
+        
+        .price-down {
+            color: var(--danger);
+            font-weight: 600;
+        }
+        
+        /* FAQ Section */
+        .faq {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background-color: white;
+            margin-bottom: 15px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+        }
+        
+        .faq-question {
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--black);
+        }
+        
+        .faq-question:hover {
+            background-color: rgba(30, 64, 175, 0.03);
+        }
+        
+        .faq-question i {
+            color: var(--primary);
+            font-size: 1.5rem;
+            transition: transform 0.3s;
+        }
+        
+        .faq-answer {
+            padding: 0 30px;
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            color: var(--gray-dark);
+            line-height: 1.7;
+        }
+        
+        .faq-answer.active {
+            padding: 0 30px 30px 30px;
+            max-height: 500px;
+        }
+        
+        .faq-question.active i {
+            transform: rotate(45deg);
+        }
+        
+        /* CTA Section */
+        .cta {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark) 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+        
+        .cta p {
+            max-width: 600px;
+            margin: 0 auto 40px;
+            opacity: 0.9;
+            font-size: 1.2rem;
+        }
+        
+        .btn-light {
+            background-color: white;
+            color: var(--black);
+            font-weight: 700;
+            padding: 15px 35px;
+            font-size: 1.1rem;
+        }
+        
+        .btn-light:hover {
+            background-color: #f0f0f0;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--black);
+            color: white;
+            padding: 80px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+        
+        .footer-column h3 {
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: white;
+        }
+        
+        .footer-column ul {
+            list-style: none;
+        }
+        
+        .footer-column ul li {
+            margin-bottom: 12px;
+        }
+        
+        .footer-column ul li a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-column ul li a:hover {
+            color: white;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+        
+        /* Divider */
+        .divider {
+            height: 1px;
+            background-color: var(--border);
+            margin: 40px 0;
+            width: 100%;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .hero-content, .trade-content {
+                flex-direction: column;
+            }
+            
+            .hero-text, .trade-text {
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            
+            h1 {
+                font-size: 2.8rem;
+            }
+            
+            .trade-text h2 {
+                font-size: 2.5rem;
+            }
+            
+            .market-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .market-header h2 {
+                margin-bottom: 20px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                padding: 20px 0;
+            }
+            
+            nav {
+                margin: 20px 0;
+            }
+            
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            
+            nav ul li {
+                margin: 0 10px 10px;
+            }
+            
+            .header-buttons {
+                margin-top: 10px;
+            }
+            
+            h1 {
+                font-size: 2.3rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+            
+            .store-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            th, td {
+                padding: 15px 10px;
+                font-size: 0.9rem;
+            }
+        }
+        
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-coins"></i>
+                    CryptoPro
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#trade">Trade</a></li>
+                        <li><a href="#market">Market</a></li>
+                        <li><a href="#app">App</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </nav>
+                <div class="header-buttons">
+                    <button class="btn btn-outline">Login</button>
+                    <button class="btn btn-primary">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1>Invest in the future of finance with cryptocurrencies</h1>
+                    <p class="subtitle">The most secure and advanced platform to buy, sell and trade Bitcoin, Ethereum and over 200 cryptocurrencies with the lowest fees in the market.</p>
+                    <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                        <button class="btn btn-primary" style="padding: 15px 30px; font-size: 1.1rem;">Start Now</button>
+                        <button class="btn btn-outline" style="padding: 15px 30px; font-size: 1.1rem;">View Demo</button>
+                    </div>
+                </div>
+                <div class="hero-image fade-in delay-1">
+                    <div style="background-color: rgba(30, 64, 175, 0.1); padding: 25px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.1);">
+                        <div style="display: flex; justify-content: space-between; background: rgba(0, 0, 0, 0.3); padding: 25px; border-radius: 8px; margin-bottom: 15px; backdrop-filter: blur(10px);">
+                            <div>
+                                <div style="font-size: 0.9rem; color: var(--gray-light);">Total Balance</div>
+                                <div style="font-size: 2rem; font-weight: 700;">$ 58,421.75</div>
+                            </div>
+                            <div style="text-align: right;">
+                                <div style="font-size: 0.9rem; color: var(--success);">+ 15.3%</div>
+                                <div style="font-size: 0.9rem; color: var(--gray-light);">this month</div>
+                            </div>
+                        </div>
+                        <div style="background: rgba(0, 0, 0, 0.3); padding: 20px; border-radius: 8px; font-size: 0.9rem; backdrop-filter: blur(10px);">
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <span>BTC/USDT</span>
+                                <span style="color: var(--success);">$ 65,280.50 ↗</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);">
+                                <span>ETH/USDT</span>
+                                <span style="color: var(--success);">$ 3,521.30 ↗</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between;">
+                                <span>SOL/USDT</span>
+                                <span style="color: var(--danger);">$ 138.42 ↘</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trade Anywhere Section -->
+    <section class="trade-anywhere" id="app">
+        <div class="container">
+            <div class="trade-content">
+                <div class="trade-text fade-in">
+                    <h2>Trade from anywhere.</h2>
+                    <p>Anywhere, anytime. Access the global cryptocurrency market through our mobile app or desktop platform.</p>
+                    
+                    <div class="platforms">
+                        <h3>Also available for:</h3>
+                        <div class="platform-badges">
+                            <div class="badge">
+                                <i class="fab fa-apple"></i> MacOS
+                            </div>
+                            <div class="badge">
+                                <i class="fab fa-windows"></i> Windows
+                            </div>
+                            <div class="badge">
+                                <i class="fab fa-linux"></i> Linux
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="app-download fade-in delay-1">
+                    <div class="qr-code">
+                        <!-- QR Code Placeholder -->
+                        <div style="text-align: center;">
+                            <div style="width: 160px; height: 160px; background-color: var(--black); display: flex; align-items: center; justify-content: center; border-radius: 5px;">
+                                <div style="color: white; font-weight: bold; font-size: 1.2rem; text-align: center;">
+                                    <div style="margin-bottom: 10px;">CRYPTOPRO</div>
+                                    <div style="font-size: 0.9rem; color: var(--primary-light);">SCAN ME</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h3>Scan to download the App</h3>
+                    <p>Available for iOS and Android. Download now and start trading in minutes.</p>
+                    
+                    <div class="store-buttons">
+                        <a href="#" class="store-btn">
+                            <i class="fab fa-apple"></i>
+                            <div>
+                                <div style="font-size: 0.8rem; font-weight: 400;">Download on the</div>
+                                <div>App Store</div>
+                            </div>
+                        </a>
+                        <a href="#" class="store-btn">
+                            <i class="fab fa-google-play"></i>
+                            <div>
+                                <div style="font-size: 0.8rem; font-weight: 400;">Get it on</div>
+                                <div>Google Play</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="trade">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why millions choose CryptoPro</h2>
+                <p>We offer the most complete and secure platform for traders of all levels</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Institutional-Level Security</h3>
+                    <p>Asset protection with cold storage, USD 1 billion insurance and multi-factor authentication.</p>
+                </div>
+                <div class="feature-card fade-in delay-1">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Ultra-Fast Transactions</h3>
+                    <p>Processing of up to 1.4 million orders per second with latency under 100ms.</p>
+                </div>
+                <div class="feature-card fade-in delay-2">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Advanced Trading Tools</h3>
+                    <p>Professional charts, advanced orders and APIs for algorithmic trading.</p>
+                </div>
+                <div class="feature-card fade-in delay-3">
+                    <div class="feature-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>24/7 Global Support</h3>
+                    <p>Support team available in 15 languages, all year round.</p>
+                </div>
+                <div class="feature-card fade-in delay-4">
+                    <div class="feature-icon">
+                        <i class="fas fa-percentage"></i>
+                    </div>
+                    <h3>Competitive Fees</h3>
+                    <p>The lowest fees in the market, with additional discount using our own cryptocurrency.</p>
+                </div>
+                <div class="feature-card fade-in delay-5">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Premium Mobile App</h3>
+                    <p>Complete trading experience on mobile with real-time notifications and biometrics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Market Data Section -->
+    <section class="market-data" id="market">
+        <div class="container">
+            <div class="market-header">
+                <h2>Real-Time Quotes</h2>
+                <div>
+                    <button class="btn btn-outline" style="margin-right: 10px; color: var(--black); border-color: var(--gray);">View All</button>
+                    <button class="btn btn-primary">Favorites</button>
+                </div>
+            </div>
+            <div class="market-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Asset</th>
+                            <th>Price</th>
+                            <th>Change (24h)</th>
+                            <th>Volume (24h)</th>
+                            <th>Market Cap</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="coin-info">
+                                    <div class="coin-icon" style="background-color: #f7931a; color: white;">B</div>
+                                    <div>
+                                        <div>Bitcoin</div>
+                                        <div style="font-size: 0.9rem; color: var(--gray);">BTC</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$ 63,420.50</td>
+                            <td class="price-up">+ 3.2%</td>
+                            <td>$ 32.4B</td>
+                            <td>$ 1.24T</td>
+                            <td><button class="btn btn-primary" style="padding: 8px 15px; font-size: 0.85rem;">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="coin-info">
+                                    <div class="coin-icon" style="background-color: #627eea; color: white;">E</div>
+                                    <div>
+                                        <div>Ethereum</div>
+                                        <div style="font-size: 0.9rem; color: var(--gray);">ETH</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$ 3,245.80</td>
+                            <td class="price-up">+ 1.8%</td>
+                            <td>$ 18.7B</td>
+                            <td>$ 389.2B</td>
+                            <td><button class="btn btn-primary" style="padding: 8px 15px; font-size: 0.85rem;">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="coin-info">
+                                    <div class="coin-icon" style="background-color: #00d395; color: white;">S</div>
+                                    <div>
+                                        <div>Solana</div>
+                                        <div style="font-size: 0.9rem; color: var(--gray);">SOL</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$ 142.65</td>
+                            <td class="price-down">- 2.1%</td>
+                            <td>$ 3.2B</td>
+                            <td>$ 62.4B</td>
+                            <td><button class="btn btn-primary" style="padding: 8px 15px; font-size: 0.85rem;">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="coin-info">
+                                    <div class="coin-icon" style="background-color: #000000; color: white;">X</div>
+                                    <div>
+                                        <div>XRP</div>
+                                        <div style="font-size: 0.9rem; color: var(--gray);">XRP</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$ 0.52</td>
+                            <td class="price-up">+ 0.5%</td>
+                            <td>$ 1.8B</td>
+                            <td>$ 28.5B</td>
+                            <td><button class="btn btn-primary" style="padding: 8px 15px; font-size: 0.85rem;">Buy</button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="coin-info">
+                                    <div class="coin-icon" style="background-color: #f0b90b; color: white;">B</div>
+                                    <div>
+                                        <div>BNB</div>
+                                        <div style="font-size: 0.9rem; color: var(--gray);">BNB</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>$ 585.30</td>
+                            <td class="price-down">- 1.2%</td>
+                            <td>$ 2.1B</td>
+                            <td>$ 89.7B</td>
+                            <td><button class="btn btn-primary" style="padding: 8px 15px; font-size: 0.85rem;">Buy</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Support Section -->
+    <section class="support" id="support">
+        <div class="container">
+            <div class="section-title">
+                <h2>24/7 Support</h2>
+                <p>Our team is always available to help you at any time</p>
+            </div>
+            <div class="support-content">
+                <div class="support-options fade-in">
+                    <div class="support-card">
+                        <div class="support-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <h3>Live Chat</h3>
+                        <p>Chat in real time with our experts. Response in less than 2 minutes.</p>
+                        <button class="btn btn-primary" style="margin-top: 15px;">Start Chat</button>
+                    </div>
+                    
+                    <div class="support-card fade-in delay-1">
+                        <div class="support-icon">
+                            <i class="fas fa-ticket-alt"></i>
+                        </div>
+                        <h3>Support Ticket</h3>
+                        <p>Submit your question and receive a response by email. Organized by priority.</p>
+                        <button class="btn btn-outline" style="margin-top: 15px; color: var(--black); border-color: var(--primary);">Open Ticket</button>
+                    </div>
+                    
+                    <div class="support-card fade-in delay-2">
+                        <div class="support-icon">
+                            <i class="fas fa-book"></i>
+                        </div>
+                        <h3>Help Center</h3>
+                        <p>Complete documentation, tutorials and step-by-step guides.</p>
+                        <button class="btn btn-outline" style="margin-top: 15px; color: var(--black); border-color: var(--primary);">Access Guides</button>
+                    </div>
+                    
+                    <div class="support-card fade-in delay-3">
+                        <div class="support-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Phone Support</h3>
+                        <p>Service in Portuguese: +55 (11) 99999-9999</p>
+                        <p style="font-size: 0.9rem; color: var(--gray); margin-top: 5px;">Mon-Fri: 9am-6pm (GMT-3)</p>
+                    </div>
+                </div>
+                
+                <div class="support-info fade-in delay-4">
+                    <h3 style="margin-bottom: 20px; color: var(--black);">Community Channels</h3>
+                    <div class="community-channels">
+                        <a href="#" class="community-link">
+                            <i class="fab fa-telegram"></i>
+                            <div>
+                                <h4>Official Telegram</h4>
+                                <p>+50,000 members</p>
+                            </div>
+                        </a>
+                        <a href="#" class="community-link">
+                            <i class="fab fa-discord"></i>
+                            <div>
+                                <h4>Discord</h4>
+                                <p>Active community</p>
+                            </div>
+                        </a>
+                        <a href="#" class="community-link">
+                            <i class="fab fa-twitter"></i>
+                            <div>
+                                <h4>Twitter/X</h4>
+                                <p>Official announcements</p>
+                            </div>
+                        </a>
+                        <a href="#" class="community-link">
+                            <i class="fab fa-youtube"></i>
+                            <div>
+                                <h4>YouTube</h4>
+                                <p>Video tutorials</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="support-stats">
+                        <div class="stat">
+                            <h4>99%</h4>
+                            <p>Satisfaction</p>
+                        </div>
+                        <div class="stat">
+                            <h4>2min</h4>
+                            <p>Response time</p>
+                        </div>
+                        <div class="stat">
+                            <h4>24/7</h4>
+                            <p>Availability</p>
+                        </div>
+                        <div class="stat">
+                            <h4>15</h4>
+                            <p>Languages</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Support Section Styles */
+        .support {
+            padding: 100px 0;
+            background-color: white;
+        }
+        
+        .support-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 50px;
+        }
+        
+        .support-options {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        
+        .support-card {
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        
+        .support-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .support-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .support-card h3 {
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            color: var(--black);
+        }
+        
+        .support-info {
+            background-color: var(--light);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        
+        .community-channels {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .community-link {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background-color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            color: var(--dark);
+            transition: all 0.3s;
+            border: 1px solid var(--border);
+        }
+        
+        .community-link:hover {
+            background-color: rgba(30, 64, 175, 0.05);
+            border-color: var(--primary-light);
+        }
+        
+        .community-link i {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .community-link h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .community-link p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        .support-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+        
+        .stat {
+            text-align: center;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+        
+        .stat h4 {
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        
+        .stat p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .support-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .support-options {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .support-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .support-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .support-card {
+                padding: 25px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .support-stats {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to the most common questions about our platform</p>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>1. Why is CryptoPro the best exchange for cryptocurrency traders?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>CryptoPro offers the ideal combination of security, liquidity, competitive fees and advanced tools. With over 10 million users worldwide, we process a daily volume exceeding USD 30 billion, ensuring fast and accurate order execution.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-1">
+                    <div class="faq-question">
+                        <span>2. What products does CryptoPro offer?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We offer a complete range of products: spot trading, futures, options, staking, loans, CryptoPro Card (crypto debit card), own wallet, OTC services for large volumes, and an NFT platform. We also provide robust APIs for developers.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-2">
+                    <div class="faq-question">
+                        <span>3. How to buy Bitcoin and other cryptocurrencies on CryptoPro</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>It's simple: 1) Create your account and verify your identity; 2) Add funds via bank transfer, credit/debit card or PIX; 3) Navigate to the "Buy" section and select the desired cryptocurrency; 4) Enter the amount and confirm the transaction. Your assets will be credited instantly.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-3">
+                    <div class="faq-question">
+                        <span>4. How to track cryptocurrency prices?</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>At CryptoPro, you can track prices in real time through our advanced charts, personalized alerts and widgets. We also offer integrated technical analysis, market news and analysis reports to help you make informed decisions.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in">
+                    <div class="faq-question">
+                        <span>5. How to trade cryptocurrencies on CryptoPro</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>After depositing funds, access the trading platform. Select the trading pair (e.g., BTC/USDT), choose the order type (market, limit, stop-limit, etc.), enter the quantity and execute. Our advanced interface offers real-time charts, technical analysis tools and complete trade history.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item fade-in delay-1">
+                    <div class="faq-question">
+                        <span>6. How to earn with cryptocurrencies on CryptoPro</span>
+                        <i class="fas fa-plus"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Besides traditional trading, we offer multiple ways to earn: Staking (up to 20% APY), cryptocurrency loans, referral programs, yield farming, launchpad for new projects, and our savings platform with competitive returns. We also offer free educational courses.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="market">
+        <div class="container">
+            <h2>Join the cryptocurrency revolution</h2>
+            <p>Open your account in minutes and start trading securely in the world's largest cryptocurrency market.</p>
+            <button class="btn btn-light">Create Free Account</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>CryptoPro</h3>
+                    <p style="color: #d1d5db; margin-bottom: 20px;">The most advanced and secure cryptocurrency platform for institutional and retail traders.</p>
+                    <div style="display: flex; gap: 15px;">
+                        <a href="#" style="color: #d1d5db; font-size: 1.2rem;"><i class="fab fa-twitter"></i></a>
+                        <a href="#" style="color: #d1d5db; font-size: 1.2rem;"><i class="fab fa-telegram"></i></a>
+                        <a href="#" style="color: #d1d5db; font-size: 1.2rem;"><i class="fab fa-youtube"></i></a>
+                        <a href="#" style="color: #d1d5db; font-size: 1.2rem;"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul>
+                        <li><a href="#">Spot Trade</a></li>
+                        <li><a href="#">Futures Trading</a></li>
+                        <li><a href="#">CryptoPro Wallet</a></li>
+                        <li><a href="#">CryptoPro Card</a></li>
+                        <li><a href="#">Staking & Earn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Prices</a></li>
+                        <li><a href="#">API for Developers</a></li>
+                        <li><a href="#">System Status</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">24/7 Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Use</a></li>
+                        <li><a href="#">Cookie Policy</a></li>
+                        <li><a href="#">Regulatory Documentation</a></li>
+                        <li><a href="#">AML/KYC Guidelines</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2026 CryptoPro. All rights reserved. Cryptocurrency transactions involve risks. Asset values may vary.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // FAQ Accordion
+            const faqQuestions = document.querySelectorAll('.faq-question');
+            
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    const answer = question.nextElementSibling;
+                    const icon = question.querySelector('i');
+                    
+                    // Toggle active class on question
+                    question.classList.toggle('active');
+                    
+                    // Toggle active class on answer
+                    answer.classList.toggle('active');
+                    
+                    // Change icon
+                    if (answer.classList.contains('active')) {
+                        icon.className = 'fas fa-minus';
+                    } else {
+                        icon.className = 'fas fa-plus';
+                    }
+                    
+                    // Close other FAQs
+                    faqQuestions.forEach(otherQuestion => {
+                        if (otherQuestion !== question) {
+                            otherQuestion.classList.remove('active');
+                            const otherAnswer = otherQuestion.nextElementSibling;
+                            const otherIcon = otherQuestion.querySelector('i');
+                            otherAnswer.classList.remove('active');
+                            otherIcon.className = 'fas fa-plus';
+                        }
+                    });
+                });
+            });
+            
+            // Scroll animations
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(30px)';
+                element.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+                observer.observe(element);
+            });
+            
+            // Smooth navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                        
+                        // Close mobile menu if open
+                        const mobileMenu = document.querySelector('.mobile-menu');
+                        if (mobileMenu && mobileMenu.classList.contains('active')) {
+                            mobileMenu.classList.remove('active');
+                        }
+                    }
+                });
+            });
+            
+            // Real-time market data simulation
+            function updateMarketData() {
+                const rows = document.querySelectorAll('.market-table tbody tr');
+                
+                rows.forEach(row => {
+                    const priceCell = row.cells[1];
+                    const changeCell = row.cells[2];
+                    
+                    if (priceCell && changeCell) {
+                        // Get current values
+                        let currentPrice = parseFloat(priceCell.textContent.replace('$ ', '').replace(',', ''));
+                        let currentChange = parseFloat(changeCell.textContent.replace('%', '').replace('+', '').replace('-', ''));
+                        
+                        // Generate small random variation
+                        const randomChange = (Math.random() - 0.5) * 0.5;
+                        const newChange = currentChange + randomChange;
+                        const newPrice = currentPrice * (1 + randomChange / 100);
+                        
+                        // Update values
+                        priceCell.textContent = '$ ' + newPrice.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                        
+                        // Format change
+                        let changeText = newChange >= 0 ? '+' + newChange.toFixed(2) : newChange.toFixed(2);
+                        changeCell.textContent = changeText + '%';
+                        
+                        // Update color class
+                        if (newChange >= 0) {
+                            changeCell.className = 'price-up';
+                        } else {
+                            changeCell.className = 'price-down';
+                        }
+                    }
+                });
+            }
+            
+            // Update market data every 5 seconds (simulation)
+            setInterval(updateMarketData, 5000);
+            
+            // Action buttons
+            const ctaButtons = document.querySelectorAll('.btn-primary, .btn-light');
+            ctaButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    if (this.textContent.includes('Create Account') || this.textContent.includes('Start')) {
+                        alert('Redirecting to registration page...');
+                        // On a real site: window.location.href = '/register';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

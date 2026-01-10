@@ -81,7 +81,7 @@ git clone https://github.com/marcio-marine-corps-soldier/technology/projects/Web
 ```
 
 ### 2. Open in browser
-Simply open the `index.html` file from the 'deliverables' folder in any modern browser.
+Simply open the `index.html` file from the `deliverables` folder in any modern browser.
 
 ### 3. Development
 For development, you can use any local server. Python suggestion:

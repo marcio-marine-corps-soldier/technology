@@ -35,9 +35,9 @@ SoundCraft Studios é uma plataforma web profissional para serviços de produç�
 ### Opção 1: Visualização Direta
 1. Clone o repositório:
 ```bash
-git clone https://github.com/seu-usuario/soundcraft-studios.git
+git clone https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/SoundCraft-Studios.git
 ```
-2. Abra o arquivo `index.html` no navegador
+2. Abra o arquivo `index.html` da pasta deliverables no navegador
 
 ### Opção 2: Servidor Local
 ```bash

@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkyWings - Sua plataforma de passagens aéreas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Reset e estilos gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #1a73e8;
+            --secondary: #0d47a1;
+            --accent: #ff6d00;
+            --light: #f8f9fa;
+            --dark: #202124;
+            --gray: #5f6368;
+            --success: #34a853;
+        }
+        
+        body {
+            color: var(--dark);
+            background-color: #f5f7fa;
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e65100;
+        }
+        
+        section {
+            padding: 80px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        h2:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        p {
+            margin-bottom: 15px;
+            color: var(--gray);
+        }
+        
+        /* Header e Navegação */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--accent);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--dark);
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(13, 71, 161, 0.9)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 180px 0 100px;
+            margin-top: 70px;
+        }
+        
+        .hero h1 {
+            color: white;
+            margin-bottom: 20px;
+        }
+        
+        .hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        
+        /* Busca de Passagens */
+        .search-container {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            max-width: 1000px;
+            margin: -80px auto 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .search-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .form-control {
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+        
+        .search-btn {
+            grid-column: 1 / -1;
+            background-color: var(--accent);
+            color: white;
+            padding: 15px;
+            font-size: 1.1rem;
+            margin-top: 10px;
+        }
+        
+        /* Serviços */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: rgba(26, 115, 232, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        /* Destinos */
+        .destinations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        
+        .destination-card {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+            height: 300px;
+        }
+        
+        .destination-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .destination-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .destination-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            color: white;
+            padding: 20px;
+        }
+        
+        .destination-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .price-tag {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        /* App Section */
+        .app-section {
+            background-color: var(--light);
+        }
+        
+        .app-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .app-text {
+            flex: 1;
+        }
+        
+        .app-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .app-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .app-badges {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+        
+        .badge {
+            display: inline-block;
+            background-color: var(--dark);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 70px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            position: relative;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+            bottom: -8px;
+            left: 0;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #b0b0b0;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-icons a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            color: white;
+            border-radius: 50%;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            color: #b0b0b0;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 2rem;
+            }
+            
+            .app-content {
+                flex-direction: column;
+            }
+            
+            .app-text, .app-image {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                right: 0;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            .hero {
+                padding: 150px 0 80px;
+            }
+            
+            .search-container {
+                margin-top: -40px;
+            }
+            
+            section {
+                padding: 60px 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .search-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .app-badges {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .btn {
+                padding: 10px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header com navegação -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <i class="fas fa-plane"></i> SkyWings
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#destinations">Destinos</a></li>
+                <li><a href="#app">App</a></li>
+                <li><a href="#contact">Contato</a></li>
+                <li><a href="#" class="btn">Minha Conta</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h1>Voando para o mundo todo</h1>
+            <p>Encontre as melhores passagens aéreas com os preços mais competitivos do mercado. Mais de 500 companhias aéreas e milhares de destinos à sua disposição.</p>
+            <a href="#search" class="btn btn-accent">Buscar Passagens</a>
+        </div>
+    </section>
+
+    <!-- Buscador de Passagens -->
+    <section id="search">
+        <div class="container">
+            <div class="search-container">
+                <h3>Encontre sua próxima viagem</h3>
+                <form class="search-form">
+                    <div class="form-group">
+                        <label for="origin">Origem</label>
+                        <input type="text" id="origin" class="form-control" placeholder="Cidade ou aeroporto de origem">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="destination">Destino</label>
+                        <input type="text" id="destination" class="form-control" placeholder="Cidade ou aeroporto de destino">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="departure">Ida</label>
+                        <input type="date" id="departure" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="return">Volta</label>
+                        <input type="date" id="return" class="form-control">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="passengers">Passageiros</label>
+                        <select id="passengers" class="form-control">
+                            <option value="1">1 Passageiro</option>
+                            <option value="2">2 Passageiros</option>
+                            <option value="3">3 Passageiros</option>
+                            <option value="4">4 Passageiros</option>
+                            <option value="5+">5+ Passageiros</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="class">Classe</label>
+                        <select id="class" class="form-control">
+                            <option value="economy">Econômica</option>
+                            <option value="premium">Premium Economy</option>
+                            <option value="business">Executiva</option>
+                            <option value="first">Primeira Classe</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn search-btn">
+                        <i class="fas fa-search"></i> Buscar Voos
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="services">
+        <div class="container">
+            <h2>Nossos Serviços</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search-dollar"></i>
+                    </div>
+                    <h3>Melhores Preços</h3>
+                    <p>Garantimos os preços mais baixos do mercado com nossa tecnologia de busca avançada que compara centenas de sites em tempo real.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Suporte 24/7</h3>
+                    <p>Nossa equipe de suporte está disponível 24 horas por dia, 7 dias por semana para ajudar com qualquer necessidade antes, durante ou depois da sua viagem.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Compra Segura</h3>
+                    <p>Utilizamos criptografia de última geração para proteger seus dados e oferecemos garantia de reembolso em caso de cancelamento por parte das companhias aéreas.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3>Roteiros Personalizados</h3>
+                    <p>Criamos roteiros de viagem personalizados com múltiplos destinos, hospedagem e atividades para tornar sua experiência única.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Destinos Populares -->
+    <section id="destinations">
+        <div class="container">
+            <h2>Destinos Populares</h2>
+            <div class="destinations-grid">
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paris">
+                    <div class="destination-info">
+                        <h3>Paris, França</h3>
+                        <p>A cidade do amor e da luz</p>
+                        <span class="price-tag">A partir de R$ 2.450</span>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Nova York">
+                    <div class="destination-info">
+                        <h3>Nova York, EUA</h3>
+                        <p>A cidade que nunca dorme</p>
+                        <span class="price-tag">A partir de R$ 3.150</span>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tóquio">
+                    <div class="destination-info">
+                        <h3>Tóquio, Japão</h3>
+                        <p>Tradição e modernidade</p>
+                        <span class="price-tag">A partir de R$ 4.850</span>
+                    </div>
+                </div>
+                
+                <div class="destination-card">
+                    <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rio de Janeiro">
+                    <div class="destination-info">
+                        <h3>Rio de Janeiro, Brasil</h3>
+                        <p>Cidade maravilhosa</p>
+                        <span class="price-tag">A partir de R$ 680</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- App Section -->
+    <section class="app-section" id="app">
+        <div class="container">
+            <div class="app-content">
+                <div class="app-text">
+                    <h2>Baixe nosso app</h2>
+                    <p>Com o aplicativo SkyWings, você pode buscar, comparar e reservar passagens aéreas diretamente do seu celular. Receba alertas de preços, faça check-in online e acesse seus bilhetes mesmo offline.</p>
+                    <p>Disponível para iOS e Android, nosso app foi classificado como o melhor app de viagens por 3 anos consecutivos.</p>
+                    
+                    <div class="app-badges">
+                        <a href="#" class="badge">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                        <a href="#" class="badge">
+                            <i class="fab fa-google-play"></i> Google Play
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="app-image">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Aplicativo SkyWings">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>SkyWings</h3>
+                    <p>Sua plataforma completa para compra de passagens aéreas. Conectamos você aos melhores destinos com preços competitivos e serviço excepcional.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#destinations">Destinos</a></li>
+                        <li><a href="#app">App</a></li>
+                        <li><a href="#">Sobre Nós</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Suporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Cancelamentos</a></li>
+                        <li><a href="#">Política de Reembolso</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contato</h3>
+                    <ul class="footer-links">
+                        <li><i class="fas fa-map-marker-alt"></i> Av. Paulista, 1000 - São Paulo, SP</li>
+                        <li><i class="fas fa-phone"></i> (11) 4002-8922</li>
+                        <li><i class="fas fa-envelope"></i> contato@skywings.com</li>
+                        <li><i class="fas fa-clock"></i> Seg-Sex: 8h-20h | Sáb: 9h-16h</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2026 SkyWings. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Menu mobile
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const navLinks = document.getElementById('navLinks');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+        
+        // Fechar menu ao clicar em um link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+        
+        // Simulação de busca de passagens
+        const searchForm = document.querySelector('.search-form');
+        searchForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            const origin = document.getElementById('origin').value;
+            const destination = document.getElementById('destination').value;
+            
+            if (!origin || !destination) {
+                alert('Por favor, preencha a origem e o destino para buscar passagens.');
+                return;
+            }
+            
+            alert(`Buscando passagens de ${origin} para ${destination}... Em um site real, esta funcionalidade conectaria com uma API de busca de passagens.`);
+            
+            // Simulação de redirecionamento para página de resultados
+            // window.location.href = `resultados.html?origem=${origin}&destino=${destination}`;
+        });
+        
+        // Definir datas mínimas para os campos de data
+        const today = new Date().toISOString().split('T')[0];
+        const tomorrow = new Date();
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const tomorrowStr = tomorrow.toISOString().split('T')[0];
+        
+        document.getElementById('departure').min = today;
+        document.getElementById('departure').value = today;
+        document.getElementById('return').min = tomorrowStr;
+        document.getElementById('return').value = tomorrowStr;
+    </script>
+</body>
+</html>

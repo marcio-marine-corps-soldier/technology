@@ -49,6 +49,7 @@ The deployment was successfully completed on the Sepolia network, with the mint 
 
 ### Token visible in MetaMask
 ![MetaMask](screenshots/metamask-token.png)
+![MetaMask](screenshots/metamask-token2.png)
 
 ### Deployment via Remix
 ![Remix](screenshots/deploy-remix.png)

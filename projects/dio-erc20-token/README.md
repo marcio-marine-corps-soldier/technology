@@ -1,4 +1,4 @@
-# 🪙 DIO Coin — ERC-20 Token
+# 🪙 MSN Coin — ERC-20 Token
 
 Projeto desenvolvido como parte do desafio prático da DIO, com foco na criação e deploy de um Token ERC-20 utilizando ferramentas Web3 modernas.
 

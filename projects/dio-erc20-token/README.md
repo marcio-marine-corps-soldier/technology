@@ -76,4 +76,6 @@ This project is educational in nature and was developed for learning purposes in
 
 ## 👨‍💻 Author
 
-**Marcio F. Reis** Challenge submitted on the **DIO (Digital Innovation One)** platform 🚀
+**Marcio F. Reis** 
+
+Challenge submitted on the **DIO (Digital Innovation One)** platform 🚀

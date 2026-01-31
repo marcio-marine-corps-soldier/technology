@@ -1,4 +1,4 @@
-# 🪙 Meu Token ERC-20
+# 🪙 MToken ERC-20
 
 Este projeto consiste na criação e deploy de um Token ERC-20 utilizando Solidity, Remix IDE e MetaMask, como parte do desafio prático da DIO.
 
@@ -33,4 +33,4 @@ O contrato segue o padrão ERC-20, permitindo:
 - RPC Info: https://rpc.info/
 
 ## 👤 Autor
-Seu Nome
+Márcio F. Reis

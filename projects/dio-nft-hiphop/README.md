@@ -68,3 +68,11 @@ Create, mine, and transfer a musical NFT using the Polygon blockchain via OpenSe
 ## 🚀 Result
 
 NFT successfully published, transferred on-chain, and documented as proof of basic mastery of Web3 technologies.
+
+---
+
+## 👨‍💻 Author
+
+### Marcio F. Reis
+
+Challenge submitted on the DIO (Digital Innovation One) platform 🚀

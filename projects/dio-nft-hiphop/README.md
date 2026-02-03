@@ -49,8 +49,11 @@ Create, mine, and transfer a musical NFT using the Polygon blockchain via OpenSe
 
 ## 📸 Evidence
 
-![Mint](assets/nft-details.png)
-![Transfer](assets/nft-liste.png)
+![NFT Listed](assets/nft-liste.png)
+*NFT listed for sale on Polygon.*
+
+![NFT Details](assets/nft-details.png)
+*NFT details including name, collection, and token metadata.*
 
 ---
 

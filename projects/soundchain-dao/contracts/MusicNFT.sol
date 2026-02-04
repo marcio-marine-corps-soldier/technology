@@ -5,42 +5,27 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Royalty.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
 contract MusicNFT is ERC721Royalty, Ownable {
+    uint256 private _nextTokenId;
 
-    uint256 public nextTokenId;
-
-    constructor() ERC721("SoundChain Music NFT", "SMUSIC") {}
-
-    function mint(
-        address artist,
-        string memory uri,
-        uint96 royaltyBps
-    ) external onlyOwner returns (uint256) {
-
-        uint256 id = nextTokenId++;
-
-        _safeMint(artist, id);
-        _setTokenURI(id, uri);
-        _setTokenRoyalty(id, artist, royaltyBps);
-
-        return id;
-    }
-
-    mapping(uint256 => string) private _tokenURIs;
-
-    function _setTokenURI(uint256 id, string memory uri) internal {
-        _tokenURIs[id] = uri;
-    }
-
-    function tokenURI(uint256 id)
-        public view override returns (string memory)
+    constructor() 
+        ERC721("MusicNFT", "MNFT")
+        Ownable(msg.sender)  // Passa o initialOwner
     {
-        return _tokenURIs[id];
+        _nextTokenId = 1;
     }
 
-    function supportsInterface(bytes4 interfaceId)
-        public view override(ERC721Royalty)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
+    function safeMint(address to) external onlyOwner returns (uint256) {
+        uint256 tokenId = _nextTokenId++;
+        _safeMint(to, tokenId);
+        return tokenId;
+    }
+
+    function setDefaultRoyalty(address receiver, uint96 feeNumerator) external onlyOwner {
+        _setDefaultRoyalty(receiver, feeNumerator);
+    }
+
+    // Funções auxiliares
+    function totalSupply() external view returns (uint256) {
+        return _nextTokenId - 1;
     }
 }

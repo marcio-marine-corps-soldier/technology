@@ -168,6 +168,14 @@ See `/docs`:
 
 ---
 
+## Proof of Execution
+
+The contracts compiled, passed tests, and deployed locally:
+
+![Deployment Screenshot](docs/screenshots/deploy-powershell.png)
+
+---
+
 ## License
 
 MIT

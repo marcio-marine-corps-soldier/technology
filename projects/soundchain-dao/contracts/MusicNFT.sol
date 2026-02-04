@@ -19,28 +19,8 @@ contract MusicNFT is ERC721Royalty, Ownable {
         uint256 id = nextTokenId++;
 
         _safeMint(artist, id);
-        _setTokenURI(id, uri);
         _setTokenRoyalty(id, artist, royaltyBps);
 
         return id;
-    }
-
-    mapping(uint256 => string) private _tokenURIs;
-
-    function _setTokenURI(uint256 id, string memory uri) internal {
-        _tokenURIs[id] = uri;
-    }
-
-    function tokenURI(uint256 id)
-        public view override returns (string memory)
-    {
-        return _tokenURIs[id];
-    }
-
-    function supportsInterface(bytes4 interfaceId)
-        public view override(ERC721Royalty)
-        returns (bool)
-    {
-        return super.supportsInterface(interfaceId);
     }
 }

@@ -17,6 +17,8 @@ contract SoundToken is ERC20Votes, Ownable {
         _mint(to, amount);
     }
 
+    // ===== overrides padrão OZ 4 =====
+
     function _afterTokenTransfer(address from, address to, uint256 amount)
         internal override(ERC20, ERC20Votes)
     {

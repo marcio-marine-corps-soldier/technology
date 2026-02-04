@@ -1,11 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.24;
+pragma solidity ^0.8.20;
 
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Votes.sol";
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Permit.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 
-contract SoundToken is ERC20, ERC20Permit, ERC20Votes, Ownable {
+contract SoundToken is ERC20Votes, Ownable {
 
     constructor()
         ERC20("SoundChain Token", "SOUND")
@@ -18,18 +17,21 @@ contract SoundToken is ERC20, ERC20Permit, ERC20Votes, Ownable {
         _mint(to, amount);
     }
 
-    // ===== overrides obrigatórios OZ 5 =====
-
-    function _update(address from, address to, uint256 value)
+    function _afterTokenTransfer(address from, address to, uint256 amount)
         internal override(ERC20, ERC20Votes)
     {
-        super._update(from, to, value);
+        super._afterTokenTransfer(from, to, amount);
     }
 
-    function nonces(address owner)
-        public view override(ERC20Permit, Nonces)
-        returns (uint256)
+    function _mint(address to, uint256 amount)
+        internal override(ERC20, ERC20Votes)
     {
-        return super.nonces(owner);
+        super._mint(to, amount);
+    }
+
+    function _burn(address account, uint256 amount)
+        internal override(ERC20, ERC20Votes)
+    {
+        super._burn(account, amount);
     }
 }

@@ -1,15 +1,47 @@
 {
   "name": "soundchain-dao",
   "version": "1.0.0",
+  "description": "SoundChain DAO - Web3 Music Governance Platform | Project for DIO Challenge",
+  "main": "index.js",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
-    "deploy": "hardhat run scripts/deploy.js --network amoy"
+    "deploy": "hardhat run scripts/deploy.js",
+    "deploy:amoy": "hardhat run scripts/deploy.js --network amoy",
+    "clean": "hardhat clean",
+    "node": "hardhat node",
+    "postinstall": "echo '✅ Dependencies installed successfully! Run: npm run compile'"
+  },
+  "keywords": [
+    "dao",
+    "blockchain",
+    "web3",
+    "music",
+    "solidity",
+    "hardhat",
+    "ethereum",
+    "polygon",
+    "dio"
+  ],
+  "author": "Márcio F. Reis <marcioreis.marine@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/marcio-marine-corps-soldier/technology/edit/main/projects/soundchain-dao#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcio-marine-corps-soldier/technology/edit/main/projects/soundchain-dao.git"
+  },
+  "bugs": {
+    "url": "https://github.com/marcio-marine-corps-soldier/technology/edit/main/projects/soundchain-dao/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
   },
   "devDependencies": {
-    "hardhat": "^2.22.0",
-    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@openzeppelin/contracts": "^5.0.0",
-    "dotenv": "^16.4.0"
-  }
+    "dotenv": "^16.4.7",
+    "hardhat": "^2.22.3"
+  },
+  "type": "commonjs"
 }

@@ -1,0 +1,36 @@
+# Node / NPM
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env.*
+
+# Hardhat / Foundry (caso evolua o projeto)
+artifacts/
+cache/
+coverage/
+coverage.json
+typechain/
+out/
+
+# Remix IDE
+.remix/
+*.remix
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor configs
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp

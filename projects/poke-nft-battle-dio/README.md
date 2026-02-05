@@ -131,7 +131,7 @@ Ready for future evolution:
 ---
 
 ## 👨‍💻 Author
-### Márcio F. Reis
+Márcio F. Reis
 
 ---
 

@@ -88,19 +88,23 @@ poke-nft-battle-dio/
 
 ## 🧪 Tests performed (Remix VM)
 
-### Deploy
+### 💾 Deploy
 ![deploy](prints/deploy.png)
 
-### Creating Bulbasaur
+### 🆕 Creating Bulbasaur
 ![buba](prints/create-bulbasaur.png)
 
-### Creating Charmander
+### 🆕 Creating Charmander
 ![char](prints/create-charmander.png)
 
-### Battle
+### ⚔️ Battle
 ![battle](prints/battle-bulbasaur-charmander.png)
 
-### NFT Transfer
+### 🎚️ Levels after battle  
+![levels](prints/bulbasaur-atack.png)
+![levels](prints/charmander-defense.png)
+
+### 🔁 NFT Transfer
 ![transfer](prints/charmander-transfer.png)
 
 ---
@@ -131,9 +135,4 @@ Ready for future evolution:
 ---
 
 ## 👨‍💻 Author
-Márcio F. Reis
-
----
-
-## 📄 License
-This project is under the MIT License. It can be used, modified, and studied for educational purposes.
+Márcio F. Reis — GitHub: [@marcio-marine-corps-soldier](https://github.com/marcio-marine-corps-soldier)

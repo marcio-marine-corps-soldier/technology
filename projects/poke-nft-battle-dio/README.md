@@ -1,6 +1,6 @@
 # 🎮 PokeDIO NFT Battle Game (ERC-721)
 
-<img width="1024" height="768" alt="Poke-Batle" src="https://github.com/user-attachments/assets/05beeaf1-d433-40f7-8ad3-59398a12ee37" />
+<img width="1024" height="605" alt="Poke-Batle" src="https://github.com/user-attachments/assets/8a22e6ed-0491-4a6d-a493-3fe90628c052" />
 
 Project developed in Solidity using the ERC-721 (NFT) standard, simulating a Pokémon battle game.
 

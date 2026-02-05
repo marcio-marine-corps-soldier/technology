@@ -98,7 +98,7 @@ poke-nft-battle-dio/
 ![char](prints/create-charmander.png)
 
 ### Battle
-![battle](prints/battle-bubasaur-charmander.png)
+![battle](prints/battle-bulbasaur-charmander.png)
 
 ### NFT Transfer
 ![transfer](prints/charmander-transfer.png)

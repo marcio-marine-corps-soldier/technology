@@ -1,15 +1,16 @@
-# CryptoPro - Professional Cryptocurrency Platform
+# CryptoPro - Professional Cryptocurrency Platform (React Edition)
 
-<img width="2752" height="1434" alt="Gemini_Generated_Image_h6pf6h6pf6h6pf6h" src="https://github.com/user-attachments/assets/4fbfcc2e-5f4c-4135-b935-26d47a6c6613" />
+<img width="2752" height="1434" alt="CryptoPro preview" src="https://github.com/user-attachments/assets/4fbfcc2e-5f4c-4135-b935-26d47a6c6613" />
 
 ![CryptoPro Preview](https://img.shields.io/badge/CryptoPro-Professional%20Crypto%20Platform-blue)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+![React](https://img.shields.io/badge/React-18-61DAFB?logo=react&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)
+![Babel](https://img.shields.io/badge/Babel-standalone-F9DC3E?logo=babel&logoColor=black)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?logo=javascript&logoColor=black)
 ![Responsive](https://img.shields.io/badge/Responsive-Yes-green)
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 
-A complete cryptocurrency platform developed with pure HTML, CSS and JavaScript, inspired by leading exchanges like Binance.
+A complete cryptocurrency platform rebuilt with **React.js** and **Bootstrap**, delivering a modular, state‑driven interface inspired by leading exchanges.
 
 ## 🌟 Demo
 
@@ -18,80 +19,91 @@ A complete cryptocurrency platform developed with pure HTML, CSS and JavaScript,
 ## ✨ Features
 
 ### 📱 Modern Interface
-- **Responsive Design** - Adaptable for desktop, tablet and mobile
-- **Black/Blue Palette** - Professional and sophisticated design
-- **Smooth Animations** - Modern transitions and visual effects
-- **Intuitive Navigation** - Menu with smooth scrolling between sections
+- **Responsive Design** – adapts perfectly to desktop, tablet, and mobile.
+- **Black/Blue Palette** – professional and sophisticated look.
+- **Smooth Animations** – scroll‑triggered fade‑ins and interactive transitions.
+- **Intuitive Navigation** – smooth scrolling between sections with React event handling.
 
-### 💼 Main Sections
-1. **Hero Section** - Impactful presentation with simulated market data
-2. **Trade Anywhere** - Mobile app download and desktop versions
-3. **Features** - 6 reasons to choose the platform
-4. **Market Data** - Real-time quotes with simulated updates
-5. **FAQ** - Interactive accordion with 6 frequently asked questions
-6. **Final CTA** - Optimized call to action
+### 💼 Main Sections (all built as React components)
+1. **Hero Section** – impactful message with a simulated balance card and live price preview.
+2. **Trade Anywhere** – app download section with QR code, store buttons, and desktop platform badges.
+3. **Features** – 6 compelling reasons to choose the platform.
+4. **Market Data** – real‑time quotes that update automatically every 5 seconds (simulated).
+5. **24/7 Support** – support cards, community channels, and satisfaction stats.
+6. **FAQ** – interactive accordion where only one answer is expanded at a time.
+7. **Final CTA** – optimized call to action to create an account.
 
-### 🔄 Interactive Features
-- **Market Simulation** - Periodically updated cryptocurrency data
-- **FAQ Accordion** - Expandable question/answer system
-- **Interactive Forms** - Buttons with visual feedback
-- **Scroll Animations** - Elements appear smoothly during scrolling
+### 🔄 Interactive Features (now powered by React hooks)
+- **Live Market Simulation** – `useMarketData` hook generates dynamic price changes.
+- **FAQ Accordion** – state‑controlled expansion, smooth height transitions.
+- **Scroll Animations** – custom `useScrollFadeIn` hook using Intersection Observer.
+- **Smooth Navigation** – anchor links handled with `window.scrollTo()` and event prevention.
 
 ## 🛠️ Technologies Used
 
-- **HTML5** - Semantic and modern structure
-- **CSS3** - Advanced styling with CSS variables, Grid and Flexbox
-- **Vanilla JavaScript** - Interactivity without external libraries
-- **Font Awesome** - Professional icons
-- **Google Fonts** - Inter typography for better readability
-- **Responsive Design** - Mobile-first with media queries
+| Technology      | Role                                                                 |
+|-----------------|----------------------------------------------------------------------|
+| **React 18**    | Component‑based UI, hooks (`useState`, `useEffect`, custom hooks)     |
+| **ReactDOM 18** | Renders the app into the DOM                                         |
+| **Babel Standalone** | Transpiles JSX directly in the browser (no build step required) |
+| **Bootstrap 5.3** | Grid system and utility classes for responsive layout               |
+| **Font Awesome 6** | Icon library for a professional touch                              |
+| **Google Fonts**  | Inter typeface for modern, readable text                           |
+| **Intersection Observer** | Drives scroll‑triggered entrance animations                |
+| **CSS3 custom properties** | Theme colours and consistent styling                     |
+
+> ⚡ No Node.js, no bundler – everything runs directly in the browser thanks to CDN links.
 
 ## 🚀 How to Use
 
-### Local Installation
+### Local viewing
+Simply open the `index.html` file (inside the `deliverables` folder) in any modern browser.  
+All dependencies (React, Bootstrap, Font Awesome, Babel) are loaded from CDNs.
+
 ```bash
 # Clone the repository
 git clone https://github.com/marcio-marine-corps-soldier/technology/projects/Web-Sites/CryptoPro/
-```
 
-Note: For local viewing, simply open the `index.html` file in the `deliverables` folder in any browser.
+# Navigate to the project folder
+cd CryptoPro/deliverables
 
-# Or use a local server like:
+# Open index.html in your browser
+# (or use a local server for a more realistic environment)
 python -m http.server 8000
+```
 
 ### Project Structure
 ```
 CryptoPro/
 ├── deliverables/
-|    └── index.html          # Main file
-├── README.md           # This file
-└── assets/             # (Optional) Resources folder
-    ├── images/         # Images and icons
-    └── css/            # Additional styles
+│   └── index.html          # Main file – contains React, JSX, and styles
+├── README.md               # This file
+└── assets/                 # (Optional) images and extra resources
 ```
+
+> **Note:** Unlike the previous version, all logic and styles are now inside a single `index.html` file, organized as React components.
 
 ## 📱 Highlighted Sections
 
 ### 1. **Professional Header**
-- Custom logo with coin icon
-- Main navigation with 6 links
-- Login and Create Account buttons
+- Sticky navigation with smooth scrolling.
+- “Login” and “Create Account” buttons with user feedback.
 
-### 2. **Real-time Market Data**
-- 5 main cryptocurrencies (BTC, ETH, SOL, XRP, BNB)
-- Updated prices, variations and volumes
-- Integrated "Buy" action buttons
+### 2. **Real‑time Market Data**
+- 5 major cryptocurrencies (BTC, ETH, SOL, XRP, BNB).
+- Live price updates, 24h change percentages, volume, and market cap.
+- Embedded “Buy” action buttons.
 
-### 3. **Multi-platform App**
-- QR Code for mobile download
-- Availability for iOS and Android
-- Desktop versions: Windows, macOS, Linux
+### 3. **Multi‑platform App**
+- QR code for mobile download.
+- Links to App Store and Google Play.
+- Badges for Windows, macOS, Linux availability.
 
 ### 4. **Complete Features**
-- Institutional security
-- Ultra-fast transactions
+- Institutional‑level security
+- Ultra‑fast transactions
 - Advanced trading tools
-- Global 24/7 support
+- 24/7 global support
 - Competitive fees
 - Premium mobile app
 
@@ -105,82 +117,66 @@ CryptoPro/
 
 ### Typography
 - **Main Font:** Inter (Google Fonts)
-- **Clear hierarchy** with weights from 300 to 800
-- **Optimized readability** for prolonged reading
+- **Weights:** 300 to 800 for clear hierarchy
+- **Optimised** for long‑form reading
 
 ### Responsiveness
-- **Mobile First** - Design optimized for mobile devices
-- **Strategic breakpoints** for tablet and desktop
-- **Responsive images and tables**
+- Mobile‑first design using Bootstrap’s responsive utilities and custom media queries.
+- Tables and images adapt gracefully on small screens.
 
-## 🔧 Customization
+## 🔧 Customisation
 
 ### Modifying Colors
-Edit CSS variables at the beginning of the HTML file:
+Edit the CSS custom properties inside the `<style>` tag of `index.html`:
 ```css
 :root {
-    --primary: #1e40af;      /* Main blue */
-    --primary-dark: #1e3a8a; /* Dark blue */
-    --black: #000000;        /* Black */
-    /* ... other colors */
+    --primary: #1e40af;
+    --primary-dark: #1e3a8a;
+    /* … */
 }
 ```
 
 ### Adding Cryptocurrencies
-To add more cryptocurrencies to the table:
-```html
-<tr>
-    <td>
-        <div class="coin-info">
-            <div class="coin-icon" style="background-color: #COLOR;">S</div>
-            <div>
-                <div>Coin Name</div>
-                <div style="font-size: 0.9rem; color: var(--gray);">SYMBOL</div>
-            </div>
-        </div>
-    </td>
-    <td>$ PRICE</td>
-    <td class="price-up">+ X%</td>
-    <td>$ VOLUME</td>
-    <td>$ MARKET CAP</td>
-    <td><button class="btn btn-primary">Buy</button></td>
-</tr>
+Extend the `initialData` array inside the `useMarketData` hook (found in the `<script type="text/babel">` block):
+```javascript
+const initialData = [
+    // … existing entries …
+    { id: 6, name: 'Cardano', symbol: 'ADA', price: 0.45, change: 2.3, … },
+];
 ```
 
 ### Updating FAQ
-Add new questions/answers:
-```html
-<div class="faq-item fade-in">
-    <div class="faq-question">
-        <span>Question?</span>
-        <i class="fas fa-plus"></i>
-    </div>
-    <div class="faq-answer">
-        <p>Detailed answer.</p>
-    </div>
-</div>
+Modify the `faqData` array inside the `FAQ` component:
+```javascript
+const faqData = [
+    { q: 'New question?', a: 'Answer text.' },
+    // …
+];
 ```
+
+### Changing Support / Features
+The data for support cards, community channels, and features are also defined as arrays inside their respective React components – edit them directly to reflect your own content.
 
 ## 📈 Future Optimizations
 
 ### Planned Improvements
-- [ ] Real cryptocurrency API
-- [ ] Functional login system
-- [ ] User dashboard
+- [ ] Integrate a real cryptocurrency API (e.g., CoinGecko)
+- [ ] Functional login / authentication
+- [ ] User dashboard and portfolio tracker
 - [ ] Conversion calculator
-- [ ] Dark/light mode
-- [ ] Internationalization (i18n)
+- [ ] Dark / light mode toggle
+- [ ] Internationalisation (i18n)
 
 ### For Production
-1. **Separate CSS/JS** into external files
-2. **Optimize images** with WebP
-3. **Implement complete SEO**
-4. **Add analytics** (Google Analytics)
-5. **Cross-browser testing**
+1. **Separate React components** into a proper Node.js / create‑react‑app project.
+2. **Optimise assets** (images, fonts).
+3. **Add SEO meta tags** and structured data.
+4. **Include analytics** (Google Analytics).
+5. **Thorough cross‑browser testing**.
 
 ## 🤝 Contributing
 
-Contributions are welcome! Follow these steps:
+Contributions are welcome!
 
 1. Fork the project
 2. Create a branch (`git checkout -b feature/NewFeature`)
@@ -190,7 +186,7 @@ Contributions are welcome! Follow these steps:
 
 ## 📄 License
 
-This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
+This project is under the MIT license. See the [LICENSE](LICENSE) file for details.
 
 ## 👤 Author
 
@@ -203,8 +199,8 @@ This project is under the MIT license. See the [LICENSE](LICENSE) file for more 
 
 - Icons by [Font Awesome](https://fontawesome.com)
 - Fonts by [Google Fonts](https://fonts.google.com)
-- Inspiration from [Binance](https://binance.com) and other platforms
-- Web development community
+- React & Bootstrap communities
+- Inspiration from Binance and other exchanges
 
 ---
 
@@ -214,13 +210,14 @@ This project is under the MIT license. See the [LICENSE](LICENSE) file for more 
 
 ## 📞 Contact
 
-Márcio F. Reis - [LinkedIn](https://linkedin.com/marcio-marine-corps-soldier)
+Márcio F. Reis – [LinkedIn](https://linkedin.com/marcio-marine-corps-soldier)
 
 Project Link: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/tree/main/projects/Web-Sites/CryptoPro/)
 
 ---
 
-**CryptoPro** - Professional cryptocurrency platform developed with modern web development best practices.
+**CryptoPro React** – Professional cryptocurrency platform rebuilt with modern React.js and a component‑driven architecture.
 
 ---
-*Last updated: March 2024*
+*Last updated: June 2026*
+```

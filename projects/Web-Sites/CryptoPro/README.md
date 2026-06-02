@@ -14,7 +14,7 @@ A complete cryptocurrency platform rebuilt with **React.js** and **Bootstrap**, 
 
 ## 🌟 Demo
 
-[![View Demo](https://img.shields.io/badge/View-Live%20Demo-brightgreen)](https://github.com/marcio-marine-corps-soldier/technology/blob/main/projects/Web-Sites/CryptoPro/assets/FireShot%20Capture%20002%20-%20CryptoPro%20-%20Cryptocurrency%20Platform%20-%20%5B%5D.png)
+[![View Demo](https://img.shields.io/badge/View-Live%20Demo-brightgreen)](https://github.com/marcio-marine-corps-soldier/technology/blob/main/projects/Web-Sites/CryptoPro/assets/FireShot%20Capture%20059%20-%20CryptoPro%20-%20Cryptocurrency%20Platform%20(React%20%2B%20Security)%20-%20%5B%5D.png)
 
 ## ✨ Features
 

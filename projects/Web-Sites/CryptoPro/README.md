@@ -29,15 +29,25 @@ A complete cryptocurrency platform rebuilt with **React.js** and **Bootstrap**, 
 2. **Trade Anywhere** – app download section with QR code, store buttons, and desktop platform badges.
 3. **Features** – 6 compelling reasons to choose the platform.
 4. **Market Data** – real‑time quotes that update automatically every 5 seconds (simulated).
-5. **24/7 Support** – support cards, community channels, and satisfaction stats.
-6. **FAQ** – interactive accordion where only one answer is expanded at a time.
-7. **Final CTA** – optimized call to action to create an account.
+5. **🔐 Privacy & Security (Conceptual Demo)** – see details below.
+6. **24/7 Support** – support cards, community channels, and satisfaction stats.
+7. **FAQ** – interactive accordion where only one answer is expanded at a time.
+8. **Final CTA** – optimized call to action to create an account.
 
 ### 🔄 Interactive Features (now powered by React hooks)
 - **Live Market Simulation** – `useMarketData` hook generates dynamic price changes.
 - **FAQ Accordion** – state‑controlled expansion, smooth height transitions.
 - **Scroll Animations** – custom `useScrollFadeIn` hook using Intersection Observer.
 - **Smooth Navigation** – anchor links handled with `window.scrollTo()` and event prevention.
+
+## 🔐 Privacy & Security – Conceptual Demonstration
+
+A seção **“Privacy & Security”** presente no site é uma **demonstração educacional** que ilustra como funcionariam tecnologias avançadas de proteção de dados em uma plataforma real.
+
+- **Criptografia ponta a ponta (E2EE):** o front‑end gera chaves RSA‑OAEP usando a Web Crypto API e realiza cifração/decifração localmente. É uma prova de conceito visual – **não há persistência de chaves nem envio de dados cifrados para um servidor**.
+- **Provas de conhecimento zero (ZKPs):** a simulação exibe uma verificação baseada em um limite, sem utilizar circuitos criptográficos reais. A “prova” é apenas um identificador ilustrativo.
+
+> ⚠️ **Importante:** esta implementação é **puramente conceitual** e não representa um sistema de segurança completo. Para que a plataforma funcione com E2EE e ZKPs de verdade seria necessário um **back‑end dedicado**, integração com bibliotecas especializadas (ex.: `snarkjs`, `libsodium`) e uma arquitetura de distribuição e verificação de chaves/provas. O valor atual do projeto está na **visão de uma exchange focada em privacidade** – o código visível é apenas um protótipo dessa visão. **A implementação completa e estruturada será realizada quando o sistema for publicado e estiver no ar.**
 
 ## 🛠️ Technologies Used
 
@@ -81,7 +91,7 @@ CryptoPro/
 └── assets/                 # (Optional) images and extra resources
 ```
 
-> **Note:** Unlike the previous version, all logic and styles are now inside a single `index.html` file, organized as React components.
+> **Note:** All logic and styles are organized as React components inside the single `index.html`.
 
 ## 📱 Highlighted Sections
 
@@ -137,7 +147,7 @@ Edit the CSS custom properties inside the `<style>` tag of `index.html`:
 ```
 
 ### Adding Cryptocurrencies
-Extend the `initialData` array inside the `useMarketData` hook (found in the `<script type="text/babel">` block):
+Extend the `initialData` array inside the `useMarketData` hook:
 ```javascript
 const initialData = [
     // … existing entries …
@@ -166,6 +176,7 @@ The data for support cards, community channels, and features are also defined as
 - [ ] Conversion calculator
 - [ ] Dark / light mode toggle
 - [ ] Internationalisation (i18n)
+- [ ] **Full implementation of E2EE and ZKP** with back‑end and dedicated cryptographic libraries (post‑launch)
 
 ### For Production
 1. **Separate React components** into a proper Node.js / create‑react‑app project.

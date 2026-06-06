@@ -213,22 +213,12 @@ This project is under the MIT license. See the [LICENSE](LICENSE) file for detai
 - React & Bootstrap communities
 - Inspiration from Binance and other exchanges
 
----
-
-⭐ **If you liked this project, leave a star on the repository!** ⭐
-
----
-
 ## 📞 Contact
 
-Márcio F. Reis – [LinkedIn](https://linkedin.com/marcio-marine-corps-soldier)
-
+Márcio F. Reis – [LinkedIn](https://linkedin.com/marcio-marine-corps-soldier)    
 Project Link: [GitHub](https://github.com/marcio-marine-corps-soldier/technology/tree/main/projects/Web-Sites/CryptoPro/)
 
 ---
 
-**CryptoPro React** – Professional cryptocurrency platform rebuilt with modern React.js and a component‑driven architecture.
-
----
-*Last updated: June 2026*
-```
+**CryptoPro React** – Professional cryptocurrency platform rebuilt with modern React.js and a component‑driven architecture.    
+⭐ **If you liked this project, leave a star on the repository!** ⭐

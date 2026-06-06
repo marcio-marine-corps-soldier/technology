@@ -4,88 +4,70 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SkyWings - Your Flight Booking Platform</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom styles to enhance Bootstrap -->
     <style>
-        /* Reset and general styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        
         :root {
             --primary: #1a73e8;
             --secondary: #0d47a1;
             --accent: #ff6d00;
-            --light: #f8f9fa;
-            --dark: #202124;
-            --gray: #5f6368;
-            --success: #34a853;
         }
-        
         body {
-            color: var(--dark);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #202124;
             background-color: #f5f7fa;
-            line-height: 1.6;
         }
-        
-        .container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: var(--primary) !important;
         }
-        
-        .btn {
-            display: inline-block;
-            padding: 12px 24px;
-            background-color: var(--primary);
-            color: white;
-            border: none;
-            border-radius: 4px;
+        .navbar-brand i {
+            color: var(--accent);
+            margin-right: 8px;
+        }
+        .nav-link {
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
         }
-        
-        .btn:hover {
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+        }
+        .btn-primary:hover {
             background-color: var(--secondary);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary);
         }
-        
         .btn-accent {
             background-color: var(--accent);
+            border-color: var(--accent);
+            color: white;
         }
-        
         .btn-accent:hover {
             background-color: #e65100;
+            border-color: #e65100;
+            color: white;
         }
-        
-        section {
-            padding: 80px 0;
+        .hero {
+            background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(13, 71, 161, 0.9)),
+                url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80') center/cover;
+            color: white;
+            padding-top: 120px;
+            padding-bottom: 80px;
+            margin-top: 56px;
         }
-        
-        h1, h2, h3, h4 {
-            margin-bottom: 20px;
-            color: var(--dark);
-        }
-        
-        h1 {
+        .hero h1 {
+            font-weight: 800;
             font-size: 3rem;
+        }
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
             font-weight: 800;
         }
-        
-        h2 {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 50px;
-            position: relative;
-        }
-        
-        h2:after {
+        .section-title:after {
             content: '';
             position: absolute;
             width: 80px;
@@ -95,162 +77,24 @@
             left: 50%;
             transform: translateX(-50%);
         }
-        
-        p {
-            margin-bottom: 15px;
-            color: var(--gray);
-        }
-        
-        /* Header and Navigation */
-        header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px 20px;
-        }
-        
-        .logo {
-            display: flex;
-            align-items: center;
-            font-size: 1.8rem;
-            font-weight: 800;
-            color: var(--primary);
-            text-decoration: none;
-        }
-        
-        .logo i {
-            margin-right: 10px;
-            color: var(--accent);
-        }
-        
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-        
-        .nav-links li {
-            margin-left: 30px;
-        }
-        
-        .nav-links a {
-            text-decoration: none;
-            color: var(--dark);
-            font-weight: 600;
-            transition: color 0.3s;
-        }
-        
-        .nav-links a:hover {
-            color: var(--primary);
-        }
-        
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--dark);
-            cursor: pointer;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(26, 115, 232, 0.9), rgba(13, 71, 161, 0.9)), url('https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 180px 0 100px;
-            margin-top: 70px;
-        }
-        
-        .hero h1 {
-            color: white;
-            margin-bottom: 20px;
-        }
-        
-        .hero p {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin: 0 auto 40px;
-        }
-        
-        /* Flight Search */
         .search-container {
-            background-color: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            max-width: 1000px;
-            margin: -80px auto 0;
+            margin-top: -60px;
             position: relative;
             z-index: 10;
-        }
-        
-        .search-form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-        
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .form-group label {
-            margin-bottom: 8px;
-            font-weight: 600;
-            color: var(--dark);
-        }
-        
-        .form-control {
-            padding: 12px 15px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-            font-size: 1rem;
-        }
-        
-        .search-btn {
-            grid-column: 1 / -1;
-            background-color: var(--accent);
-            color: white;
-            padding: 15px;
-            font-size: 1.1rem;
-            margin-top: 10px;
-        }
-        
-        /* Services */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .service-card {
-            background-color: white;
+            background: white;
             border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             padding: 30px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
-        
+        .service-card {
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
-        
         .service-icon {
             width: 70px;
             height: 70px;
@@ -259,158 +103,63 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 20px;
             font-size: 1.8rem;
             color: var(--primary);
+            margin: 0 auto 20px;
         }
-        
-        /* Destinations */
-        .destinations-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 50px;
-        }
-        
         .destination-card {
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             position: relative;
-            height: 300px;
+            overflow: hidden;
+            border-radius: 8px;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-        
         .destination-card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s;
         }
-        
         .destination-card:hover img {
             transform: scale(1.05);
         }
-        
-        .destination-info {
+        .destination-overlay {
             position: absolute;
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
             color: white;
             padding: 20px;
         }
-        
-        .destination-info h3 {
-            margin-bottom: 5px;
-        }
-        
         .price-tag {
-            display: inline-block;
             background-color: var(--accent);
-            color: white;
             padding: 5px 10px;
             border-radius: 4px;
             font-weight: 600;
+            display: inline-block;
             margin-top: 10px;
         }
-        
-        /* App Section */
-        .app-section {
-            background-color: var(--light);
-        }
-        
-        .app-content {
-            display: flex;
-            align-items: center;
-            gap: 50px;
-        }
-        
-        .app-text {
-            flex: 1;
-        }
-        
-        .app-image {
-            flex: 1;
-            text-align: center;
-        }
-        
-        .app-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .app-badges {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-        }
-        
-        .badge {
-            display: inline-block;
-            background-color: var(--dark);
-            color: white;
+        .app-badges .badge {
+            background-color: #202124;
             padding: 10px 20px;
             border-radius: 8px;
             font-weight: 600;
+            text-decoration: none;
+            color: white;
+            transition: background 0.3s;
         }
-        
-        /* Footer */
+        .app-badges .badge:hover {
+            background-color: var(--primary);
+        }
         footer {
-            background-color: var(--dark);
+            background-color: #202124;
             color: white;
-            padding: 70px 0 20px;
         }
-        
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-        
-        .footer-column h3 {
-            color: white;
-            font-size: 1.3rem;
-            margin-bottom: 25px;
-            position: relative;
-        }
-        
-        .footer-column h3:after {
-            content: '';
-            position: absolute;
-            width: 40px;
-            height: 3px;
-            background-color: var(--accent);
-            bottom: -8px;
-            left: 0;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
+        footer a {
             color: #b0b0b0;
             text-decoration: none;
-            transition: color 0.3s;
         }
-        
-        .footer-links a:hover {
+        footer a:hover {
             color: white;
         }
-        
-        .social-icons {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
         .social-icons a {
             display: inline-flex;
             align-items: center;
@@ -420,422 +169,319 @@
             background-color: #333;
             color: white;
             border-radius: 50%;
-            text-decoration: none;
-            transition: background-color 0.3s;
+            margin-right: 10px;
         }
-        
         .social-icons a:hover {
             background-color: var(--primary);
+            color: white;
         }
-        
-        .copyright {
-            text-align: center;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-            color: #b0b0b0;
-            font-size: 0.9rem;
-        }
-        
-        /* Responsiveness */
-        @media (max-width: 992px) {
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            h2 {
-                font-size: 2rem;
-            }
-            
-            .app-content {
-                flex-direction: column;
-            }
-            
-            .app-text, .app-image {
-                width: 100%;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 70px;
-                left: 0;
-                right: 0;
-                background-color: white;
-                flex-direction: column;
-                padding: 20px;
-                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-            }
-            
-            .nav-links.active {
-                display: flex;
-            }
-            
-            .nav-links li {
-                margin: 10px 0;
-            }
-            
-            .mobile-menu-btn {
-                display: block;
-            }
-            
-            .hero {
-                padding: 150px 0 80px;
-            }
-            
-            .search-container {
-                margin-top: -40px;
-            }
-            
-            section {
-                padding: 60px 0;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .search-form {
-                grid-template-columns: 1fr;
-            }
-            
-            .app-badges {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .btn {
-                padding: 10px 20px;
-            }
+        .footer-title:after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 3px;
+            background-color: var(--accent);
+            margin-top: 8px;
         }
     </style>
 </head>
 <body>
-    <!-- Header with navigation -->
-    <header>
-        <div class="container header-container">
-            <a href="#" class="logo">
-                <i class="fas fa-plane"></i> SkyWings
-            </a>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#destinations">Destinations</a></li>
-                <li><a href="#app">App</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="#" class="btn">My Account</a></li>
-            </ul>
-        </div>
-    </header>
+    <div id="root"></div>
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>Flying all over the world</h1>
-            <p>Find the best flight tickets with the most competitive prices on the market. Over 500 airlines and thousands of destinations at your disposal.</p>
-            <a href="#search" class="btn btn-accent">Search Flights</a>
-        </div>
-    </section>
+    <!-- React + ReactDOM + Babel -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-    <!-- Flight Search -->
-    <section id="search">
-        <div class="container">
-            <div class="search-container">
-                <h3>Find your next trip</h3>
-                <form class="search-form">
-                    <div class="form-group">
-                        <label for="origin">Origin</label>
-                        <input type="text" id="origin" class="form-control" placeholder="City or airport of origin">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="destination">Destination</label>
-                        <input type="text" id="destination" class="form-control" placeholder="City or airport of destination">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="departure">Departure</label>
-                        <input type="date" id="departure" class="form-control">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="return">Return</label>
-                        <input type="date" id="return" class="form-control">
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="passengers">Passengers</label>
-                        <select id="passengers" class="form-control">
-                            <option value="1">1 Passenger</option>
-                            <option value="2">2 Passengers</option>
-                            <option value="3">3 Passengers</option>
-                            <option value="4">4 Passengers</option>
-                            <option value="5+">5+ Passengers</option>
-                        </select>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="class">Class</label>
-                        <select id="class" class="form-control">
-                            <option value="economy">Economy</option>
-                            <option value="premium">Premium Economy</option>
-                            <option value="business">Business</option>
-                            <option value="first">First Class</option>
-                        </select>
-                    </div>
-                    
-                    <button type="submit" class="btn search-btn">
-                        <i class="fas fa-search"></i> Search Flights
-                    </button>
-                </form>
-            </div>
-        </div>
-    </section>
+    <script type="text/babel">
+        const { useState } = React;
 
-    <!-- Services -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search-dollar"></i>
-                    </div>
-                    <h3>Best Prices</h3>
-                    <p>We guarantee the lowest prices on the market with our advanced search technology that compares hundreds of sites in real time.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3>24/7 Support</h3>
-                    <p>Our support team is available 24 hours a day, 7 days a week to help with any needs before, during or after your trip.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Secure Purchase</h3>
-                    <p>We use state-of-the-art encryption to protect your data and offer refund guarantees in case of cancellation by airlines.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-route"></i>
-                    </div>
-                    <h3>Custom Itineraries</h3>
-                    <p>We create personalized travel itineraries with multiple destinations, accommodation and activities to make your experience unique.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-plane-departure"></i>
-                    </div>
-                    <h3>Flexible Bookings</h3>
-                    <p>Enjoy flexible booking options with easy changes, cancellations, and rebooking policies to accommodate your travel plans.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Loyalty Program</h3>
-                    <p>Earn points on every booking and redeem them for discounts, upgrades, and exclusive travel experiences with our loyalty program.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+        // ---------- Components ----------
 
-    <!-- Popular Destinations -->
-    <section id="destinations">
-        <div class="container">
-            <h2>Popular Destinations</h2>
-            <div class="destinations-grid">
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Paris">
-                    <div class="destination-info">
-                        <h3>Paris, France</h3>
-                        <p>The city of love and light</p>
-                        <span class="price-tag">From $490</span>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="New York">
-                    <div class="destination-info">
-                        <h3>New York, USA</h3>
-                        <p>The city that never sleeps</p>
-                        <span class="price-tag">From $630</span>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Tokyo">
-                    <div class="destination-info">
-                        <h3>Tokyo, Japan</h3>
-                        <p>Tradition and modernity</p>
-                        <span class="price-tag">From $970</span>
-                    </div>
-                </div>
-                
-                <div class="destination-card">
-                    <img src="https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rio de Janeiro">
-                    <div class="destination-info">
-                        <h3>Rio de Janeiro, Brazil</h3>
-                        <p>Wonderful city</p>
-                        <span class="price-tag">From $136</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        function Header() {
+            const [isOpen, setIsOpen] = useState(false);
 
-    <!-- App Section -->
-    <section class="app-section" id="app">
-        <div class="container">
-            <div class="app-content">
-                <div class="app-text">
-                    <h2>Download our app</h2>
-                    <p>With the SkyWings app, you can search, compare and book flight tickets directly from your phone. Receive price alerts, check in online and access your tickets even offline.</p>
-                    <p>Available for iOS and Android, our app has been rated as the best travel app for 3 consecutive years.</p>
-                    
-                    <div class="app-badges">
-                        <a href="#" class="badge">
-                            <i class="fab fa-apple"></i> App Store
+            const toggleMenu = () => setIsOpen(!isOpen);
+            const closeMenu = () => setIsOpen(false);
+
+            return (
+                <nav className="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+                    <div className="container">
+                        <a className="navbar-brand" href="#">
+                            <i className="fas fa-plane"></i> SkyWings
                         </a>
-                        <a href="#" class="badge">
-                            <i class="fab fa-google-play"></i> Google Play
-                        </a>
+                        <button className="navbar-toggler" type="button" onClick={toggleMenu}>
+                            <span className="navbar-toggler-icon"></span>
+                        </button>
+                        <div className={`collapse navbar-collapse ${isOpen ? 'show' : ''}`}>
+                            <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+                                <li className="nav-item"><a className="nav-link" href="#home" onClick={closeMenu}>Home</a></li>
+                                <li className="nav-item"><a className="nav-link" href="#services" onClick={closeMenu}>Services</a></li>
+                                <li className="nav-item"><a className="nav-link" href="#destinations" onClick={closeMenu}>Destinations</a></li>
+                                <li className="nav-item"><a className="nav-link" href="#app" onClick={closeMenu}>App</a></li>
+                                <li className="nav-item"><a className="nav-link" href="#contact" onClick={closeMenu}>Contact</a></li>
+                                <li className="nav-item"><a className="btn btn-primary ms-3" href="#" onClick={closeMenu}>My Account</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="app-image">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="SkyWings App">
-                </div>
-            </div>
-        </div>
-    </section>
+                </nav>
+            );
+        }
 
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-column">
-                    <h3>SkyWings</h3>
-                    <p>Your complete platform for flight ticket purchases. We connect you to the best destinations with competitive prices and exceptional service.</p>
-                    <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        function Hero() {
+            return (
+                <section className="hero text-center" id="home">
+                    <div className="container">
+                        <h1>Flying all over the world</h1>
+                        <p className="lead mb-4">
+                            Find the best flight tickets with the most competitive prices on the market. Over 500 airlines and thousands of destinations at your disposal.
+                        </p>
+                        <a href="#search" className="btn btn-accent btn-lg">Search Flights</a>
                     </div>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#destinations">Destinations</a></li>
-                        <li><a href="#app">App</a></li>
-                        <li><a href="#">About Us</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Support</h3>
-                    <ul class="footer-links">
-                        <li><a href="#">Help Center</a></li>
-                        <li><a href="#">Cancellations</a></li>
-                        <li><a href="#">Refund Policy</a></li>
-                        <li><a href="#">Terms of Use</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt"></i> City of Los Angeles, CA - US</li>
-                        <li><i class="fas fa-phone"></i> +1 (212) 555-5555</li>
-                        <li><i class="fas fa-envelope"></i> contact@skywings.com</li>
-                        <li><i class="fas fa-clock"></i> Mon-Fri: 8am-8pm | Sat: 9am-4pm</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="copyright">
-                <p>&copy; 2026 SkyWings. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+                </section>
+            );
+        }
 
-    <script>
-        // Mobile menu
-        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-        const navLinks = document.getElementById('navLinks');
-        
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            const icon = mobileMenuBtn.querySelector('i');
-            if (navLinks.classList.contains('active')) {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-times');
-            } else {
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
-            }
-        });
-        
-        // Close menu when clicking a link
-        document.querySelectorAll('.nav-links a').forEach(link => {
-            link.addEventListener('click', () => {
-                navLinks.classList.remove('active');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.remove('fa-times');
-                icon.classList.add('fa-bars');
+        function SearchForm() {
+            const [origin, setOrigin] = useState('');
+            const [destination, setDestination] = useState('');
+            const [departure, setDeparture] = useState(new Date().toISOString().split('T')[0]);
+            const [returnDate, setReturnDate] = useState(() => {
+                const d = new Date();
+                d.setDate(d.getDate() + 1);
+                return d.toISOString().split('T')[0];
             });
-        });
-        
-        // Flight search simulation
-        const searchForm = document.querySelector('.search-form');
-        searchForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-            
-            const origin = document.getElementById('origin').value;
-            const destination = document.getElementById('destination').value;
-            
-            if (!origin || !destination) {
-                alert('Please fill in the origin and destination to search for flights.');
-                return;
-            }
-            
-            alert(`Searching for flights from ${origin} to ${destination}... On a real site, this feature would connect to a flight search API.`);
-            
-            // Simulation of redirecting to results page
-            // window.location.href = `results.html?origin=${origin}&destination=${destination}`;
-        });
-        
-        // Set minimum dates for date fields
-        const today = new Date().toISOString().split('T')[0];
-        const tomorrow = new Date();
-        tomorrow.setDate(tomorrow.getDate() + 1);
-        const tomorrowStr = tomorrow.toISOString().split('T')[0];
-        
-        document.getElementById('departure').min = today;
-        document.getElementById('departure').value = today;
-        document.getElementById('return').min = tomorrowStr;
-        document.getElementById('return').value = tomorrowStr;
+            const [passengers, setPassengers] = useState('1');
+            const [flightClass, setFlightClass] = useState('economy');
+
+            const handleSubmit = (e) => {
+                e.preventDefault();
+                if (!origin.trim() || !destination.trim()) {
+                    alert('Please fill in the origin and destination to search for flights.');
+                    return;
+                }
+                alert(`Searching for flights from ${origin} to ${destination}... On a real site, this feature would connect to a flight search API.`);
+            };
+
+            const today = new Date().toISOString().split('T')[0];
+            const tomorrow = new Date();
+            tomorrow.setDate(tomorrow.getDate() + 1);
+            const tomorrowStr = tomorrow.toISOString().split('T')[0];
+
+            return (
+                <section id="search">
+                    <div className="container">
+                        <div className="search-container">
+                            <h3 className="mb-4">Find your next trip</h3>
+                            <form onSubmit={handleSubmit}>
+                                <div className="row g-3">
+                                    <div className="col-md-4 col-sm-6">
+                                        <label className="form-label fw-bold">Origin</label>
+                                        <input type="text" className="form-control" placeholder="City or airport of origin"
+                                            value={origin} onChange={(e) => setOrigin(e.target.value)} />
+                                    </div>
+                                    <div className="col-md-4 col-sm-6">
+                                        <label className="form-label fw-bold">Destination</label>
+                                        <input type="text" className="form-control" placeholder="City or airport of destination"
+                                            value={destination} onChange={(e) => setDestination(e.target.value)} />
+                                    </div>
+                                    <div className="col-md-4 col-sm-6">
+                                        <label className="form-label fw-bold">Departure</label>
+                                        <input type="date" className="form-control" min={today}
+                                            value={departure} onChange={(e) => setDeparture(e.target.value)} />
+                                    </div>
+                                    <div className="col-md-4 col-sm-6">
+                                        <label className="form-label fw-bold">Return</label>
+                                        <input type="date" className="form-control" min={tomorrowStr}
+                                            value={returnDate} onChange={(e) => setReturnDate(e.target.value)} />
+                                    </div>
+                                    <div className="col-md-4 col-sm-6">
+                                        <label className="form-label fw-bold">Passengers</label>
+                                        <select className="form-select" value={passengers} onChange={(e) => setPassengers(e.target.value)}>
+                                            <option value="1">1 Passenger</option>
+                                            <option value="2">2 Passengers</option>
+                                            <option value="3">3 Passengers</option>
+                                            <option value="4">4 Passengers</option>
+                                            <option value="5+">5+ Passengers</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-md-4 col-sm-6">
+                                        <label className="form-label fw-bold">Class</label>
+                                        <select className="form-select" value={flightClass} onChange={(e) => setFlightClass(e.target.value)}>
+                                            <option value="economy">Economy</option>
+                                            <option value="premium">Premium Economy</option>
+                                            <option value="business">Business</option>
+                                            <option value="first">First Class</option>
+                                        </select>
+                                    </div>
+                                    <div className="col-12">
+                                        <button type="submit" className="btn btn-accent w-100 py-3 mt-2">
+                                            <i className="fas fa-search me-2"></i> Search Flights
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        function Services() {
+            const services = [
+                { icon: "fa-search-dollar", title: "Best Prices", desc: "We guarantee the lowest prices on the market with our advanced search technology that compares hundreds of sites in real time." },
+                { icon: "fa-headset", title: "24/7 Support", desc: "Our support team is available 24 hours a day, 7 days a week to help with any needs before, during or after your trip." },
+                { icon: "fa-shield-alt", title: "Secure Purchase", desc: "We use state-of-the-art encryption to protect your data and offer refund guarantees in case of cancellation by airlines." },
+                { icon: "fa-route", title: "Custom Itineraries", desc: "We create personalized travel itineraries with multiple destinations, accommodation and activities to make your experience unique." },
+                { icon: "fa-plane-departure", title: "Flexible Bookings", desc: "Enjoy flexible booking options with easy changes, cancellations, and rebooking policies to accommodate your travel plans." },
+                { icon: "fa-award", title: "Loyalty Program", desc: "Earn points on every booking and redeem them for discounts, upgrades, and exclusive travel experiences with our loyalty program." }
+            ];
+
+            return (
+                <section id="services" className="py-5">
+                    <div className="container">
+                        <h2 className="text-center section-title">Our Services</h2>
+                        <div className="row g-4 mt-4">
+                            {services.map((s, i) => (
+                                <div key={i} className="col-md-4 col-sm-6">
+                                    <div className="card service-card h-100 text-center p-4">
+                                        <div className="service-icon mx-auto">
+                                            <i className={`fas ${s.icon}`}></i>
+                                        </div>
+                                        <h4>{s.title}</h4>
+                                        <p className="text-muted">{s.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        function Destinations() {
+            const destinations = [
+                { city: "Paris, France", desc: "The city of love and light", price: "$490", img: "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+                { city: "New York, USA", desc: "The city that never sleeps", price: "$630", img: "https://images.unsplash.com/photo-1523531294919-4bcd7c65e216?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+                { city: "Tokyo, Japan", desc: "Tradition and modernity", price: "$970", img: "https://images.unsplash.com/photo-1536152470836-b943b246224c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" },
+                { city: "Rio de Janeiro, Brazil", desc: "Wonderful city", price: "$136", img: "https://images.unsplash.com/photo-1483729558449-99ef09a8c325?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" }
+            ];
+
+            return (
+                <section id="destinations" className="py-5 bg-light">
+                    <div className="container">
+                        <h2 className="text-center section-title">Popular Destinations</h2>
+                        <div className="row g-4 mt-4">
+                            {destinations.map((d, i) => (
+                                <div key={i} className="col-md-6 col-lg-3">
+                                    <div className="destination-card">
+                                        <img src={d.img} alt={d.city} className="w-100" style={{ height: '300px', objectFit: 'cover' }} />
+                                        <div className="destination-overlay">
+                                            <h5 className="mb-1">{d.city}</h5>
+                                            <small>{d.desc}</small>
+                                            <span className="price-tag">From {d.price}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        function AppSection() {
+            return (
+                <section id="app" className="py-5">
+                    <div className="container">
+                        <div className="row align-items-center">
+                            <div className="col-lg-6 mb-4 mb-lg-0">
+                                <h2 className="mb-4">Download our app</h2>
+                                <p>With the SkyWings app, you can search, compare and book flight tickets directly from your phone. Receive price alerts, check in online and access your tickets even offline.</p>
+                                <p>Available for iOS and Android, our app has been rated as the best travel app for 3 consecutive years.</p>
+                                <div className="app-badges d-flex gap-3 mt-4">
+                                    <a href="#" className="badge"><i className="fab fa-apple me-2"></i> App Store</a>
+                                    <a href="#" className="badge"><i className="fab fa-google-play me-2"></i> Google Play</a>
+                                </div>
+                            </div>
+                            <div className="col-lg-6 text-center">
+                                <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                                    alt="SkyWings App" className="img-fluid rounded shadow" />
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            );
+        }
+
+        function Footer() {
+            return (
+                <footer id="contact" className="pt-5 pb-3">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-4 mb-4">
+                                <h5 className="footer-title">SkyWings</h5>
+                                <p className="small">Your complete platform for flight ticket purchases. We connect you to the best destinations with competitive prices and exceptional service.</p>
+                                <div className="social-icons mt-3">
+                                    <a href="#"><i className="fab fa-facebook-f"></i></a>
+                                    <a href="#"><i className="fab fa-twitter"></i></a>
+                                    <a href="#"><i className="fab fa-instagram"></i></a>
+                                    <a href="#"><i className="fab fa-linkedin-in"></i></a>
+                                </div>
+                            </div>
+                            <div className="col-md-2 mb-4">
+                                <h5 className="footer-title">Quick Links</h5>
+                                <ul className="list-unstyled">
+                                    <li><a href="#home">Home</a></li>
+                                    <li><a href="#services">Services</a></li>
+                                    <li><a href="#destinations">Destinations</a></li>
+                                    <li><a href="#app">App</a></li>
+                                    <li><a href="#">About Us</a></li>
+                                </ul>
+                            </div>
+                            <div className="col-md-2 mb-4">
+                                <h5 className="footer-title">Support</h5>
+                                <ul className="list-unstyled">
+                                    <li><a href="#">Help Center</a></li>
+                                    <li><a href="#">Cancellations</a></li>
+                                    <li><a href="#">Refund Policy</a></li>
+                                    <li><a href="#">Terms of Use</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                </ul>
+                            </div>
+                            <div className="col-md-4 mb-4">
+                                <h5 className="footer-title">Contact</h5>
+                                <ul className="list-unstyled small">
+                                    <li><i className="fas fa-map-marker-alt me-2"></i> City of Los Angeles, CA - US</li>
+                                    <li><i className="fas fa-phone me-2"></i> +1 (212) 555-5555</li>
+                                    <li><i className="fas fa-envelope me-2"></i> contact@skywings.com</li>
+                                    <li><i className="fas fa-clock me-2"></i> Mon-Fri: 8am-8pm | Sat: 9am-4pm</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr className="border-secondary" />
+                        <p className="text-center text-muted small mb-0">&copy; 2026 SkyWings. All rights reserved.</p>
+                    </div>
+                </footer>
+            );
+        }
+
+        function App() {
+            return (
+                <>
+                    <Header />
+                    <Hero />
+                    <SearchForm />
+                    <Services />
+                    <Destinations />
+                    <AppSection />
+                    <Footer />
+                </>
+            );
+        }
+
+        // Render the app
+        ReactDOM.createRoot(document.getElementById('root')).render(<App />);
     </script>
 </body>
 </html>

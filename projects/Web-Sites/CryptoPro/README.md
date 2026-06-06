@@ -1,4 +1,4 @@
-# CryptoPro - Professional Cryptocurrency Platform (React Edition)
+# CryptoPro - Professional Cryptocurrency Platform
 
 <img width="2752" height="1434" alt="CryptoPro preview" src="https://github.com/user-attachments/assets/4fbfcc2e-5f4c-4135-b935-26d47a6c6613" />
 
